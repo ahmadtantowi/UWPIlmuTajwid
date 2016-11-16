@@ -8,6 +8,88 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="w640">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="480"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="menuPanel.Orientation" Value="Horizontal"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
 
+        <StackPanel x:Name="menuPanel" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <!-- LOGO -->
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image Height="150" 
+                       Margin="30,10,30,0"
+                       Source="Assets/Logo/UWPTajwid 200x200.png"/>
+                <TextBlock HorizontalAlignment="Center" 
+                           Margin="10,0,10,10" Style="{StaticResource HeaderTextBlockStyle}"
+                           Text="Ilmu Tajwid"/>
+            </StackPanel>
+
+            <!-- MENU -->
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Name="menuHijaiyah" 
+                                Grid.Row="0" Grid.Column="0" 
+                                Width="100" Margin="10"
+                                Background="Transparent"
+                                Click="menuHijaiyah_Click">
+                            <StackPanel>
+                                <Image Source="Assets/Logo/logo hijaiyah.png"/>
+                                <TextBlock HorizontalAlignment="Center" Text="Hijaiyah"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Name="menuTajwid" 
+                                Grid.Row="0" Grid.Column="1" 
+                                Width="100" Margin="10"
+                                Background="Transparent"
+                                Click="menuTajwid_Click">
+                            <StackPanel>
+                                <Image Source="Assets/Logo/logo tajwid.png"/>
+                                <TextBlock HorizontalAlignment="Center" Text="Tajwid"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Name="menuLatihan" 
+                                Grid.Row="1" Grid.Column="0" 
+                                Width="100" Margin="10"
+                                Background="Transparent"
+                                Click="menuLatihan_Click">
+                            <StackPanel>
+                                <Image Source="Assets/Logo/logo latihan.png"/>
+                                <TextBlock HorizontalAlignment="Center" Text="Latihan"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Name="menuPengaturan" 
+                                Grid.Row="1" Grid.Column="1" 
+                                Width="100" Margin="10"
+                                Background="Transparent"
+                                Click="menuPengaturan_Click">
+                            <StackPanel>
+                                <Image Source="Assets/Logo/logo pengaturan.png"/>
+                                <TextBlock HorizontalAlignment="Center" Text="Pengaturan"/>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        
     </Grid>
 </Page>
