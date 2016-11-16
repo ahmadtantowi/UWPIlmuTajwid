@@ -1,0 +1,85 @@
+﻿<Page
+    x:Class="UWPIlmuTajwid.Tajwid"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPIlmuTajwid"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Margin="12,10,12,0" 
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="MENU TAJWID" />
+
+        <Pivot Grid.Row="1">
+            <!-- ALIF LAM -->
+            <PivotItem Header="Alif lam">
+                <StackPanel>
+                    <StackPanel Name="panelAlifLam" Orientation="Horizontal">
+                        <Button Name="assamsiyah" 
+                                Margin="7" 
+                                Width="150"
+                                Content="Alif Lam Samsiyah"
+                                Click="assamsiyah_Click"/>
+                        <Button Name="alqamariyah" 
+                                Margin="7"
+                                Width="150"
+                                Content="Alif Lam Qamariah"
+                                Click="alqamariyah_Click"/>
+                    </StackPanel>
+                    <ScrollViewer>
+                        <StackPanel>
+                            <TextBlock Name="jenisAlifLam" 
+                                   Margin="0,5,0,0"
+                                   FontWeight="SemiBold"
+                                   TextWrapping="WrapWholeWords"
+                                   Text=""/>
+                            <TextBlock Name="kontenAlifLam"
+                                   Margin="0,0,0,5"
+                                   TextWrapping="WrapWholeWords"
+                                   Text=""/>
+                            <TextBlock Name="huruf2Tajwid"
+                                   Margin="0,5,0,0"/>
+                            <TextBlock Name="huruf2AlifLam"
+                                   Margin="0,0,0,5"
+                                   FontFamily="Arial"
+                                   FontSize="35"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </StackPanel>
+            </PivotItem>
+
+            <!-- NUN SUKUN -->
+            <PivotItem Header="Nun mati/tanwin">
+
+            </PivotItem>
+
+            <!-- MIM SUKUN -->
+            <PivotItem Header="Mim mati">
+
+            </PivotItem>
+
+            <!-- MAD -->
+            <PivotItem Header="Mad">
+
+            </PivotItem>
+
+            <!-- WAQAF -->
+            <PivotItem Header="Waqaf">
+
+            </PivotItem>
+
+            <!-- WASHAL -->
+            <PivotItem Header="Washal">
+
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>

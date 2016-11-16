@@ -34,7 +34,7 @@ namespace UWPIlmuTajwid
 
         private void menuTajwid_Click(object sender, RoutedEventArgs e)
         {
-            //this.Frame.Navigate(typeof(Tajwid));
+            this.Frame.Navigate(typeof(Tajwid));
         }
 
         private void menuLatihan_Click(object sender, RoutedEventArgs e)
