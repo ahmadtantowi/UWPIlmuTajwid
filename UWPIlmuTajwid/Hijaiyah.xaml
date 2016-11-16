@@ -1,0 +1,214 @@
+﻿<Page
+    x:Class="UWPIlmuTajwid.Hijaiyah"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPIlmuTajwid"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="w600">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="makhrajPanel.Orientation" Value="Horizontal"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <TextBlock Grid.Row="0"
+                   Margin="12,10,12,0" 
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="MENU HIJAIYAH" />
+
+        <Pivot Grid.Row="1">
+
+            <!-- HURUF HIJAIYAH -->
+            <PivotItem Header="Huruf hijaiyah" FontFamily="Arial">
+                <ScrollViewer>
+
+                    <Grid HorizontalAlignment="Stretch" Width="Auto">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Content="ج" Grid.Row="0" Grid.Column="0"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="jim_Click"/>
+                        <Button Content="ث" Grid.Row="0" Grid.Column="1"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="tsa_Click"/>
+                        <Button Content="ت" Grid.Row="0" Grid.Column="2"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="ta_Click"/>
+                        <Button Content="ب" Grid.Row="0" Grid.Column="3"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="ba_Click"/>
+                        <Button Content="ا" Grid.Row="0" Grid.Column="4"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="alif_Click"/>
+                        <Button Content="ر" Grid.Row="2" Grid.Column="0"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="ra_Click"/>
+                        <Button Content="ذ" Grid.Row="2" Grid.Column="1"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="dzal_Click"/>
+                        <Button Content="د" Grid.Row="2" Grid.Column="2"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="dal_Click"/>
+                        <Button Content="خ" Grid.Row="2" Grid.Column="3"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="kha_Click"/>
+                        <Button Content="ح" Grid.Row="2" Grid.Column="4"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="ha_Click"/>
+                        <Button Content="ض" Grid.Row="4" Grid.Column="0"  HorizontalAlignment="Center" Width="60" FontSize="38" FontFamily="Arial" Click="dhad_Click"/>
+                        <Button Content="ص" Grid.Row="4" Grid.Column="1"  HorizontalAlignment="Center" Width="60" FontSize="38" FontFamily="Arial" Click="shad_Click"/>
+                        <Button Content="ش" Grid.Row="4" Grid.Column="2"  HorizontalAlignment="Center" Width="60" FontSize="38" FontFamily="Arial" Click="syin_Click"/>
+                        <Button Content="س" Grid.Row="4" Grid.Column="3"  HorizontalAlignment="Center" Width="60" FontSize="38" FontFamily="Arial" Click="sin_Click"/>
+                        <Button Content="ز" Grid.Row="4" Grid.Column="4"  HorizontalAlignment="Center" Width="60" FontSize="38" FontFamily="Arial" Click="zai_Click"/>
+                        <Button Content="ف" Grid.Row="6" Grid.Column="0"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="fa_Click"/>
+                        <Button Content="غ" Grid.Row="6" Grid.Column="1"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="ghain_Click"/>
+                        <Button Content="ع" Grid.Row="6" Grid.Column="2"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="ain_Click"/>
+                        <Button Content="ظ" Grid.Row="6" Grid.Column="3"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="zha_Click"/>
+                        <Button Content="ط" Grid.Row="6" Grid.Column="4"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="tha_Click"/>
+                        <Button Content="ن" Grid.Row="8" Grid.Column="0"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="nun_Click"/>
+                        <Button Content="م" Grid.Row="8" Grid.Column="1"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="mim_Click"/>
+                        <Button Content="ل" Grid.Row="8" Grid.Column="2"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="lam_Click"/>
+                        <Button Content="ك" Grid.Row="8" Grid.Column="3"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="kaf_Click"/>
+                        <Button Content="ق" Grid.Row="8" Grid.Column="4"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="qaf_Click"/>
+                        <!--Button Content="" Grid.Row="10" Grid.Column="0"  HorizontalAlignment="Center" Width="60" FontSize="40" Click="ra_Click"/-->
+                        <Button Content="ي" Grid.Row="10" Grid.Column="1"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="ya_Click"/>
+                        <Button Content="ء" Grid.Row="10" Grid.Column="2"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="hamzah_Click"/>
+                        <Button Content="ه" Grid.Row="10" Grid.Column="3"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="hha_Click"/>
+                        <Button Content="و" Grid.Row="10" Grid.Column="4"  HorizontalAlignment="Center" Width="60" FontSize="40" FontFamily="Arial" Click="wau_Click"/>
+
+                        <TextBlock Text="Jim"   Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Tsa"   Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Ta"    Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Ba"    Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Alif"  Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Ra"    Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Dzal"  Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Dal"   Grid.Row="3" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Kha"   Grid.Row="3" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Ha"    Grid.Row="3" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Dhad"  Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Shad"  Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Syin"  Grid.Row="5" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Sin"   Grid.Row="5" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Zai"   Grid.Row="5" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Fa"    Grid.Row="7" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Ghain" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="'Ain"  Grid.Row="7" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Zha"   Grid.Row="7" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Tha"   Grid.Row="7" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Nun"   Grid.Row="9" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Mim"   Grid.Row="9" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Lam"   Grid.Row="9" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Kaf"   Grid.Row="9" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Qaf"   Grid.Row="9" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <!--TextBlock Text="Dhad" Grid.Row="11" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/-->
+                        <TextBlock Text="Ya"    Grid.Row="11" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Hamzah" Grid.Row="11" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Hha"   Grid.Row="11" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <TextBlock Text="Wau"   Grid.Row="11" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+                    </Grid>
+
+                </ScrollViewer>
+            </PivotItem>
+
+            <!-- MAKHRAJ HURUF -->
+            <PivotItem Header="Makhraj huruf">
+                <StackPanel x:Name="makhrajPanel" Orientation="Vertical">
+                    <Image x:Name="makhrajImage" 
+                           Margin="0,0,0,10"
+                           Source="Assets/makhraj huruf.png"/>
+                    <ScrollViewer>
+                        <StackPanel>
+                            <StackPanel>
+                                <TextBlock Text="Tenggorokan:"/>
+                                <ScrollViewer HorizontalScrollMode="Enabled">
+                                    <StackPanel Orientation="Horizontal">
+                                    <Button Margin="3" Width="35" Content="ا" Click="alif_Click"/>
+                                    <Button Margin="3" Width="35" Content="ه" Click="hha_Click"/>
+                                    <Button Margin="3" Width="35" Content="ع" Click="ain_Click"/>
+                                    <Button Margin="3" Width="35" Content="ح" Click="ha_Click"/>
+                                    <Button Margin="3" Width="35" Content="غ" Click="ghain_Click"/>
+                                    <Button Margin="3" Width="35" Content="خ" Click="kha_Click"/>
+                                    </StackPanel>
+                                </ScrollViewer>
+                            </StackPanel>
+                            <StackPanel>
+                                <TextBlock Text="Pangkal lidah:"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Margin="3" Width="35" Content="ق" Click="qaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="ك" Click="kaf_Click"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </StackPanel>
+            </PivotItem>
+
+            <!-- HARAKAT -->
+            <PivotItem Header="Harakat">
+                <ScrollViewer>
+                    <Grid>
+                        <StackPanel Orientation="Vertical" Margin="0,0,0,10">
+                            <TextBlock TextWrapping="Wrap" 
+                                   Text="Harakat (حركات) merupakan tanda baca yang ditempatkan pada huruf hijaiyah untuk memperjelas gerakan dan pengucapan huruf tersebut."/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,5,0,0"
+                                   Text="Contoh tanpa harakat:"/>
+                            <TextBlock TextWrapping="Wrap" FontFamily="Arial" FontSize="30" Margin="0,5,0,10"
+                                   Text="قل اعوذ برب الناس"/>
+                            <TextBlock TextWrapping="Wrap"
+                                   Text="Contoh dengan harakat:"/>
+                            <TextBlock TextWrapping="Wrap" FontFamily="Arial" FontSize="30" Margin="0,5,0,10"
+                                   Text="قُلْ اَعُوْذُ بِرَبِّ النَّاسِ"/>
+
+                            <TextBlock Margin="0,5,0,0" 
+                                           Text="Macam-macam harakat:"/>
+                            <TextBlock Margin="0,5,0,0" FontSize="30" FontFamily="Arial" 
+                                           Text="( ــَــِــُـ )"/>
+                            <TextBlock Text="Keterangan:"/>
+                            <TextBlock TextWrapping="Wrap"
+                                           Text="1. Fathah ( ـَ ) untuk memberikan bunyi vokal 'a'"/>
+                            <TextBlock TextWrapping="Wrap"
+                                           Text="2. Kasrah ( ـِ ) untuk memberikan bunyi vokal 'i'"/>
+                            <TextBlock TextWrapping="Wrap"
+                                           Text="3. Dhammah ( ـُ ) untuk memberikan bunyi vokal 'u'"/>
+
+                            <TextBlock Margin="0,15,0,0" FontSize="30" FontFamily="Arial" 
+                                           Text="( ــًــٍــٌـ )"/>
+                            <TextBlock Text="Keterangan:"/>
+                            <TextBlock TextWrapping="Wrap"
+                                           Text="1. Fathatein ( ـً ) untuk memberikan bunyi vokal 'an'"/>
+                            <TextBlock TextWrapping="Wrap"
+                                           Text="2. Kasratein ( ـٍ ) untuk memberikan bunyi vokal 'in'"/>
+                            <TextBlock TextWrapping="Wrap"
+                                           Text="3. Dhammatein ( ـٌ ) untuk memberikan bunyi vokal 'un'"/>
+
+                            <TextBlock Margin="0,15,0,0" FontSize="30" FontFamily="Arial" 
+                                           Text="( ــْــّـ )"/>
+                            <TextBlock Text="Keterangan:"/>
+                            <TextBlock TextWrapping="Wrap"
+                                           Text="1. Tanda sukun ( ـْ ) di atas sebuah huruf menunjukkan bahwa huruf tersebut mati"/>
+                            <TextBlock TextWrapping="Wrap"
+                                           Text="2. Tanda tasydid ( ـّ ) di atas suatu huruf menunjukkan bahwa huruf tersebut dibaca ganda, seperti  ن نْ = نّ "/>
+                        </StackPanel>
+                    </Grid>
+                </ScrollViewer>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>

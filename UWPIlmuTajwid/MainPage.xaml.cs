@@ -29,7 +29,7 @@ namespace UWPIlmuTajwid
 
         private void menuHijaiyah_Click(object sender, RoutedEventArgs e)
         {
-            //this.Frame.Navigate(typeof(Hijaiyah));
+            this.Frame.Navigate(typeof(Hijaiyah));
         }
 
         private void menuTajwid_Click(object sender, RoutedEventArgs e)
