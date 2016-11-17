@@ -129,35 +129,138 @@
 
             <!-- MAKHRAJ HURUF -->
             <PivotItem Header="Makhraj huruf">
-                <StackPanel x:Name="makhrajPanel" Orientation="Vertical">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
                     <Image x:Name="makhrajImage" 
+                           Grid.Row="0"
                            Margin="0,0,0,10"
                            Source="Assets/makhraj huruf.png"/>
+
+                    <ScrollViewer Grid.Row="1">
+                        <StackPanel>
+                            <TextBlock Text="Al-Jauf (rongga mulut):"/>
+                            <RelativePanel >
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Margin="3" Width="35" Content="ا" Click="alif_Click"/>
+                                    <Button Margin="3" Width="35" Content="و" Click="hha_Click"/>
+                                    <Button Margin="3" Width="35" Content="ي" Click="ain_Click"/>
+                                </StackPanel>
+                            </RelativePanel>
+
+                            <TextBlock Text="Al-Halqu (tenggorokan):"/>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Margin="3" Width="35" Content="ء" Click="qaf_Click"/>
+                                <Button Margin="3" Width="35" Content="ح" Click="kaf_Click"/>
+                                <Button Margin="3" Width="35" Content="ع" Click="qaf_Click"/>
+                                <Button Margin="3" Width="35" Content="ه" Click="kaf_Click"/>
+                                <Button Margin="3" Width="35" Content="غ" Click="qaf_Click"/>
+                                <Button Margin="3" Width="35" Content="خ" Click="kaf_Click"/>
+                            </StackPanel>
+
+                            <TextBlock Text="Al-Lisanu (lidah):"/>
+                            <StackPanel Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Visible" UseLayoutRounding="True" >
+                                <Button Margin="3" Width="35" Content="ق" Click="qaf_Click"/>
+                                <Button Margin="3" Width="35" Content="ك" Click="kaf_Click"/>
+                                <Button Margin="3" Width="35" Content="ج" Click="qaf_Click"/>
+                                <Button Margin="3" Width="35" Content="ش" Click="kaf_Click"/>
+                                <Button Margin="3" Width="35" Content="ي" Click="qaf_Click"/>
+                                <Button Margin="3" Width="35" Content="ض" Click="kaf_Click"/>
+                                <Button Margin="3" Width="35" Content="ل" Click="qaf_Click"/>
+                                <Button Margin="3" Width="35" Content="ن" Click="kaf_Click"/>
+                                <Button Margin="3" Width="35" Content="ر" Click="qaf_Click"/>
+                                <Button Margin="3" Width="35" Content="د" Click="kaf_Click"/>
+                                <Button Margin="3" Width="35" Content="ت" Click="qaf_Click"/>
+                                <Button Margin="3" Width="35" Content="ط" Click="kaf_Click"/>
+                                <Button Margin="3" Width="35" Content="ص" Click="qaf_Click"/>
+                                <Button Margin="3" Width="35" Content="س" Click="kaf_Click"/>
+                                <Button Margin="3" Width="35" Content="ز" Click="qaf_Click"/>
+                                <Button Margin="3" Width="35" Content="ظ" Click="kaf_Click"/>
+                                <Button Margin="3" Width="35" Content="ث" Click="qaf_Click"/>
+                                <Button Margin="3" Width="35" Content="ذ" Click="kaf_Click"/>
+                            </StackPanel>
+
+                            <TextBlock Text="Asy-Syafatain (dua bibir):"/>
+                            <StackPanel Orientation="Horizontal">
+                                    <Button Margin="3" Width="35" Content="ب" Click="alif_Click"/>
+                                    <Button Margin="3" Width="35" Content="م" Click="hha_Click"/>
+                                    <Button Margin="3" Width="35" Content="و" Click="ain_Click"/>
+                                    <Button Margin="3" Width="35" Content="ف" Click="ain_Click"/>
+                                </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+                
+                
+                <!--
+                <StackPanel x:Name="makhrajPanel" Orientation="Vertical">
+                    
                     <ScrollViewer>
                         <StackPanel>
                             <StackPanel>
-                                <TextBlock Text="Tenggorokan:"/>
-                                <ScrollViewer HorizontalScrollMode="Enabled">
+                                <TextBlock Text="Al-Jauf (rongga mulut):"/>
+                                <RelativePanel >
                                     <StackPanel Orientation="Horizontal">
                                     <Button Margin="3" Width="35" Content="ا" Click="alif_Click"/>
-                                    <Button Margin="3" Width="35" Content="ه" Click="hha_Click"/>
-                                    <Button Margin="3" Width="35" Content="ع" Click="ain_Click"/>
-                                    <Button Margin="3" Width="35" Content="ح" Click="ha_Click"/>
-                                    <Button Margin="3" Width="35" Content="غ" Click="ghain_Click"/>
-                                    <Button Margin="3" Width="35" Content="خ" Click="kha_Click"/>
+                                    <Button Margin="3" Width="35" Content="و" Click="hha_Click"/>
+                                    <Button Margin="3" Width="35" Content="ي" Click="ain_Click"/>
                                     </StackPanel>
-                                </ScrollViewer>
+                                </RelativePanel>
                             </StackPanel>
                             <StackPanel>
-                                <TextBlock Text="Pangkal lidah:"/>
+                                <TextBlock Text="Al-Halqu (tenggorokan):"/>
                                 <StackPanel Orientation="Horizontal">
+                                    <Button Margin="3" Width="35" Content="ء" Click="qaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="ح" Click="kaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="ع" Click="qaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="ه" Click="kaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="غ" Click="qaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="خ" Click="kaf_Click"/>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="Al-Lisanu (lidah):"/>
+                                <RelativePanel ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                                    <StackPanel Orientation="Horizontal">
                                     <Button Margin="3" Width="35" Content="ق" Click="qaf_Click"/>
                                     <Button Margin="3" Width="35" Content="ك" Click="kaf_Click"/>
-                                </StackPanel>
+                                    <Button Margin="3" Width="35" Content="ج" Click="qaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="ش" Click="kaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="ي" Click="qaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="ض" Click="kaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="ل" Click="qaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="ن" Click="kaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="ر" Click="qaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="د" Click="kaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="ت" Click="qaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="ط" Click="kaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="ص" Click="qaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="س" Click="kaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="ز" Click="qaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="ظ" Click="kaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="ث" Click="qaf_Click"/>
+                                    <Button Margin="3" Width="35" Content="ذ" Click="kaf_Click"/>
+                                    </StackPanel>
+                                </RelativePanel>
+                            </StackPanel>
+                            <StackPanel>
+                                <TextBlock Text="Asy-Syafatain (dua bibir):"/>
+                                <ScrollViewer HorizontalScrollMode="Enabled">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Margin="3" Width="35" Content="ب" Click="alif_Click"/>
+                                        <Button Margin="3" Width="35" Content="م" Click="hha_Click"/>
+                                        <Button Margin="3" Width="35" Content="و" Click="ain_Click"/>
+                                        <Button Margin="3" Width="35" Content="ف" Click="ain_Click"/>
+                                    </StackPanel>
+                                </ScrollViewer>
                             </StackPanel>
                         </StackPanel>
                     </ScrollViewer>
                 </StackPanel>
+                -->
             </PivotItem>
 
             <!-- HARAKAT -->
