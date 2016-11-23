@@ -26,12 +26,12 @@ namespace UWPIlmuTajwid
         {
             this.InitializeComponent();
 
-            var settings = Windows.Storage.ApplicationData.Current.RoamingSettings;
+            //var settings = Windows.Storage.ApplicationData.Current.RoamingSettings;
 
-            if (settings.Values["currentTheme"] as string == "dark")
-                SwitchTheme_Toggle.IsOn = true;
-            else
-                SwitchTheme_Toggle.IsOn = false;
+            //if (settings.Values["currentTheme"] as string == "dark")
+            //    SwitchTheme_Toggle.IsOn = true;
+            //else
+            //    SwitchTheme_Toggle.IsOn = false;
         }
 
         private void SwitchTheme_Toggled(object sender, RoutedEventArgs e)

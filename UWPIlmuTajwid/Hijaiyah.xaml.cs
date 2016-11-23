@@ -29,23 +29,23 @@ namespace UWPIlmuTajwid
 
         private void alif_Click(object sender, RoutedEventArgs e)
         {
-
+            AlifMediaElement.Play();
         }
         private void ba_Click(object sender, RoutedEventArgs e)
         {
-
+            BaMediaElement.Play();
         }
         private void ta_Click(object sender, RoutedEventArgs e)
         {
-
+            TaMediaElement.Play();
         }
         private void tsa_Click(object sender, RoutedEventArgs e)
         {
-
+            TsafMediaElement.Play();
         }
         private void jim_Click(object sender, RoutedEventArgs e)
         {
-
+            JimMediaElement.Play();
         }
         private void ha_Click(object sender, RoutedEventArgs e)
         {

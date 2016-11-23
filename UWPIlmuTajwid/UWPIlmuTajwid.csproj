@@ -122,6 +122,11 @@
     <Content Include="Assets\Logo\logo tajwid.png" />
     <Content Include="Assets\Logo\UWPTajwid 200x200.png" />
     <Content Include="Assets\makhraj huruf.png" />
+    <Content Include="Assets\Suara\alif.mp3" />
+    <Content Include="Assets\Suara\ba.mp3" />
+    <Content Include="Assets\Suara\jim.mp3" />
+    <Content Include="Assets\Suara\ta.mp3" />
+    <Content Include="Assets\Suara\tsa.mp3" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -153,8 +158,11 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Assets\Suara\" />
+    <SDKReference Include="SQLite.UWP.2015, Version=3.15.1">
+      <Name>SQLite for Universal Windows Platform</Name>
+    </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

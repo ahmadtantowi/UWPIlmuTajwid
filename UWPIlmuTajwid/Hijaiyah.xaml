@@ -19,9 +19,11 @@
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="600"/>
                     </VisualState.StateTriggers>
+                    <!--
                     <VisualState.Setters>
                         <Setter Target="makhrajPanel.Orientation" Value="Horizontal"/>
                     </VisualState.Setters>
+                    -->
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
@@ -141,7 +143,7 @@
                            Source="Assets/makhraj huruf.png"/>
 
                     <ScrollViewer Grid.Row="1">
-                        <StackPanel>
+                        <StackPanel Name="makhrajPanel">
                             <TextBlock Text="Al-Jauf (rongga mulut):"/>
                             <RelativePanel >
                                 <StackPanel Orientation="Horizontal">
@@ -313,5 +315,28 @@
                 </ScrollViewer>
             </PivotItem>
         </Pivot>
+
+        <!-- MEDIA ELEMENT -->
+        <MediaElement x:Name="AlifMediaElement"
+                      Source="/Assets/Suara/alif.mp3"
+                      Volume="1"
+                      AutoPlay="False"/>
+        <MediaElement x:Name="BaMediaElement"
+                      Source="/Assets/Suara/ba.mp3"
+                      Volume="1"
+                      AutoPlay="False"/>
+        <MediaElement x:Name="TaMediaElement"
+                      Source="/Assets/Suara/ta.mp3"
+                      Volume="1"
+                      AutoPlay="False"/>
+        <MediaElement x:Name="TsafMediaElement"
+                      Source="/Assets/Suara/tsa.mp3"
+                      Volume="1"
+                      AutoPlay="False"/>
+        <MediaElement x:Name="JimMediaElement"
+                      Source="/Assets/Suara/jim.mp3"
+                      Volume="1"
+                      AutoPlay="False"/>
+
     </Grid>
 </Page>

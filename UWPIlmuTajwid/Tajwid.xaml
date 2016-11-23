@@ -37,20 +37,27 @@
                     <ScrollViewer>
                         <StackPanel>
                             <TextBlock Name="jenisAlifLam" 
-                                   Margin="0,5,0,0"
-                                   FontWeight="SemiBold"
-                                   TextWrapping="WrapWholeWords"
-                                   Text=""/>
-                            <TextBlock Name="kontenAlifLam"
-                                   Margin="0,0,0,5"
-                                   TextWrapping="WrapWholeWords"
-                                   Text=""/>
-                            <TextBlock Name="huruf2Tajwid"
-                                   Margin="0,5,0,0"/>
+                                       Margin="0,5,0,0"
+                                       FontWeight="SemiBold"
+                                       TextWrapping="WrapWholeWords"
+                                       Text=""/>
+                            <TextBlock Name="pengertianAlifLam"
+                                       Margin="0,0,0,5"
+                                       TextWrapping="WrapWholeWords"
+                                       Text=""/>
+                            <TextBlock Name="caraBacaAlifLam_Text"
+                                       Margin="0,5,0,0"
+                                       TextWrapping="Wrap"/>
+                            <TextBlock Name="caraBacaAlifLam"
+                                       Margin="0,5,0,0"
+                                       TextWrapping="Wrap"/>
+                            <TextBlock Name="huruf2AlifLam_Text"
+                                       Margin="0,5,0,0"
+                                       TextWrapping="Wrap"/>
                             <TextBlock Name="huruf2AlifLam"
-                                   Margin="0,0,0,5"
-                                   FontFamily="Arial"
-                                   FontSize="35"/>
+                                       Margin="0,0,0,5"
+                                       FontFamily="Arial"
+                                       FontSize="35"/>
                         </StackPanel>
                     </ScrollViewer>
                 </StackPanel>
@@ -58,7 +65,56 @@
 
             <!-- NUN SUKUN -->
             <PivotItem Header="Nun mati/tanwin">
-
+                <StackPanel>
+                    <StackPanel Name="panelNunMati" Orientation="Vertical">
+                        <Button Name="idzhar" 
+                                Margin="7" 
+                                Width="100"
+                                Content="Idzhar"
+                                Click="idzhar_Click"/>
+                        <Button Name="idgham" 
+                                Margin="7"
+                                Width="100"
+                                Content="Idgham"
+                                Click="idgham_Click"/>
+                        <Button Name="iqlab" 
+                                Margin="7"
+                                Width="100"
+                                Content="Iqlab"
+                                Click="iqlab_Click"/>
+                        <Button Name="ikhfa" 
+                                Margin="7"
+                                Width="100"
+                                Content="Ikhfa"
+                                Click="ikhfa_Click"/>
+                        </StackPanel>
+                    <ScrollViewer>
+                        <StackPanel>
+                            <TextBlock Name="jenisNunMati" 
+                                       Margin="0,5,0,0"
+                                       FontWeight="SemiBold"
+                                       TextWrapping="WrapWholeWords"
+                                       Text=""/>
+                            <TextBlock Name="caraBacaNunMati_Text"
+                                       Margin="0,5,0,0"
+                                       TextWrapping="Wrap"/>
+                            <TextBlock Name="caraBacaNunMati"
+                                       Margin="0,5,0,0"
+                                       TextWrapping="Wrap"/>
+                            <TextBlock Name="pengertianNunMati"
+                                       Margin="0,0,0,5"
+                                       TextWrapping="WrapWholeWords"
+                                       Text=""/>
+                            <TextBlock Name="huruf2NunMati_Text"
+                                       Margin="0,5,0,0"
+                                       TextWrapping="Wrap"/>
+                            <TextBlock Name="huruf2NunMati"
+                                       Margin="0,0,0,5"
+                                       FontFamily="Arial"
+                                       FontSize="35"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </StackPanel>
             </PivotItem>
 
             <!-- MIM SUKUN -->
