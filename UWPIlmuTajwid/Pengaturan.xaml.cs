@@ -45,10 +45,10 @@ namespace UWPIlmuTajwid
             }
 
             settings.Values.Add("currentTheme", currentTheme == "light" ? "dark" : "light");
-            if (settings.Values["currentTheme"] as string == "dark")
-                SwitchTheme_Toggle.IsOn = true;
-            else
-                SwitchTheme_Toggle.IsOn = false;
+            //if (settings.Values["currentTheme"] as string == "dark")
+            //    SwitchTheme_Toggle.IsOn = true;
+            //else
+            //    SwitchTheme_Toggle.IsOn = false;
 
             NotifSwitchTheme.Text = "Mengubah tema membutuhkan memulai ulang aplikasi";
             ValueSwitchTheme.Text = settings.Values["currentTheme"] as string;

@@ -29,6 +29,7 @@
                                           OffContent="Terang" OnContent="Gelap"/>
                             <TextBlock Name="NotifSwitchTheme" Text=""/>
                             <TextBlock Name="ValueSwitchTheme" Text=""/>
+                            <!--
                             <StackPanel>
                                 <RadioButton Name="SwitchThemeLight"
                                              Content="Terang"
@@ -37,6 +38,7 @@
                                              Content="Gelap"
                                              Click="SwitchThemeDark_Click"/>
                             </StackPanel>
+                            -->
                         </StackPanel>
                     </PivotItem>
                     <PivotItem Header="Tentang">
