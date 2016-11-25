@@ -11,17 +11,31 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0"
                    Margin="12,10,12,0" 
                    Style="{StaticResource BaseTextBlockStyle}"
                    Text="LATIHAN" />
-        <Button Grid.Row="1" HorizontalAlignment="Center" Width="200">
+        <Button Grid.Row="1" 
+                HorizontalAlignment="Center" 
+                Width="200">
             <StackPanel>
-                <AppBarButton Icon="Play" Content="Main" HorizontalAlignment="Center"/>
-                <TextBlock Text="Mulai latihan" HorizontalAlignment="Center"/>
+                <AppBarButton Icon="Play" Content="Main" 
+                              HorizontalAlignment="Center"/>
+                <TextBlock Text="Mulai latihan" 
+                           HorizontalAlignment="Center"/>
             </StackPanel>
         </Button>
+        
+        <!-- database SQLite -->
+        <StackPanel Grid.Row="2">
+            <TextBox Name="nama_field" Margin="5" Text="Nama"/>
+            <TextBox Name="umur_field" Margin="5" Text="Umur"/>
+            <Button Content="OK" Margin="5" Click="ok_button_Click"/>
+            <Button Content="Tampilkan" Margin="5" Click="View_Database_Click"/>
+            <TextBlock Name="view_table" Margin="10"/>
+        </StackPanel>
     </Grid>
 </Page>
