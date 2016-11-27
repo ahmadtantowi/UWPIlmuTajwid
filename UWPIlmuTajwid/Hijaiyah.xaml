@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Page 
     x:Class="UWPIlmuTajwid.Hijaiyah"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -19,11 +19,9 @@
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="600"/>
                     </VisualState.StateTriggers>
-                    <!--
                     <VisualState.Setters>
-                        <Setter Target="makhrajPanel.Orientation" Value="Horizontal"/>
+                        <Setter Target="harakatPanel.Orientation" Value="Horizontal"/>
                     </VisualState.Setters>
-                    -->
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
@@ -145,52 +143,52 @@
                     <ScrollViewer Grid.Row="1">
                         <StackPanel Name="makhrajPanel">
                             <TextBlock Text="Al-Jauf (rongga mulut):"/>
-                            <RelativePanel >
+                            <RelativePanel>
                                 <StackPanel Orientation="Horizontal">
                                     <Button Margin="3" Width="35" Content="ا" Click="alif_Click"/>
-                                    <Button Margin="3" Width="35" Content="و" Click="hha_Click"/>
-                                    <Button Margin="3" Width="35" Content="ي" Click="ain_Click"/>
+                                    <Button Margin="3" Width="35" Content="و" Click="wau_Click"/>
+                                    <Button Margin="3" Width="35" Content="ي" Click="ya_Click"/>
                                 </StackPanel>
                             </RelativePanel>
 
                             <TextBlock Text="Al-Halqu (tenggorokan):"/>
                             <StackPanel Orientation="Horizontal">
-                                <Button Margin="3" Width="35" Content="ء" Click="qaf_Click"/>
-                                <Button Margin="3" Width="35" Content="ح" Click="kaf_Click"/>
-                                <Button Margin="3" Width="35" Content="ع" Click="qaf_Click"/>
-                                <Button Margin="3" Width="35" Content="ه" Click="kaf_Click"/>
-                                <Button Margin="3" Width="35" Content="غ" Click="qaf_Click"/>
-                                <Button Margin="3" Width="35" Content="خ" Click="kaf_Click"/>
+                                <Button Margin="3" Width="35" Content="ء" Click="hamzah_Click"/>
+                                <Button Margin="3" Width="35" Content="ح" Click="ha_Click"/>
+                                <Button Margin="3" Width="35" Content="ع" Click="ain_Click"/>
+                                <Button Margin="3" Width="35" Content="ه" Click="hha_Click"/>
+                                <Button Margin="3" Width="35" Content="غ" Click="ghain_Click"/>
+                                <Button Margin="3" Width="35" Content="خ" Click="kha_Click"/>
                             </StackPanel>
 
                             <TextBlock Text="Al-Lisanu (lidah):"/>
                             <StackPanel Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Visible" UseLayoutRounding="True" >
                                 <Button Margin="3" Width="35" Content="ق" Click="qaf_Click"/>
                                 <Button Margin="3" Width="35" Content="ك" Click="kaf_Click"/>
-                                <Button Margin="3" Width="35" Content="ج" Click="qaf_Click"/>
-                                <Button Margin="3" Width="35" Content="ش" Click="kaf_Click"/>
-                                <Button Margin="3" Width="35" Content="ي" Click="qaf_Click"/>
-                                <Button Margin="3" Width="35" Content="ض" Click="kaf_Click"/>
-                                <Button Margin="3" Width="35" Content="ل" Click="qaf_Click"/>
-                                <Button Margin="3" Width="35" Content="ن" Click="kaf_Click"/>
-                                <Button Margin="3" Width="35" Content="ر" Click="qaf_Click"/>
-                                <Button Margin="3" Width="35" Content="د" Click="kaf_Click"/>
-                                <Button Margin="3" Width="35" Content="ت" Click="qaf_Click"/>
-                                <Button Margin="3" Width="35" Content="ط" Click="kaf_Click"/>
-                                <Button Margin="3" Width="35" Content="ص" Click="qaf_Click"/>
-                                <Button Margin="3" Width="35" Content="س" Click="kaf_Click"/>
-                                <Button Margin="3" Width="35" Content="ز" Click="qaf_Click"/>
-                                <Button Margin="3" Width="35" Content="ظ" Click="kaf_Click"/>
-                                <Button Margin="3" Width="35" Content="ث" Click="qaf_Click"/>
-                                <Button Margin="3" Width="35" Content="ذ" Click="kaf_Click"/>
+                                <Button Margin="3" Width="35" Content="ج" Click="jim_Click"/>
+                                <Button Margin="3" Width="35" Content="ش" Click="syin_Click"/>
+                                <Button Margin="3" Width="35" Content="ي" Click="ya_Click"/>
+                                <Button Margin="3" Width="35" Content="ض" Click="dhad_Click"/>
+                                <Button Margin="3" Width="35" Content="ل" Click="lam_Click"/>
+                                <Button Margin="3" Width="35" Content="ن" Click="nun_Click"/>
+                                <Button Margin="3" Width="35" Content="ر" Click="ra_Click"/>
+                                <Button Margin="3" Width="35" Content="د" Click="dal_Click"/>
+                                <Button Margin="3" Width="35" Content="ت" Click="ta_Click"/>
+                                <Button Margin="3" Width="35" Content="ط" Click="tha_Click"/>
+                                <Button Margin="3" Width="35" Content="ص" Click="shad_Click"/>
+                                <Button Margin="3" Width="35" Content="س" Click="sin_Click"/>
+                                <Button Margin="3" Width="35" Content="ز" Click="zai_Click"/>
+                                <Button Margin="3" Width="35" Content="ظ" Click="zha_Click"/>
+                                <Button Margin="3" Width="35" Content="ث" Click="tsa_Click"/>
+                                <Button Margin="3" Width="35" Content="ذ" Click="dzal_Click"/>
                             </StackPanel>
 
                             <TextBlock Text="Asy-Syafatain (dua bibir):"/>
                             <StackPanel Orientation="Horizontal">
-                                    <Button Margin="3" Width="35" Content="ب" Click="alif_Click"/>
-                                    <Button Margin="3" Width="35" Content="م" Click="hha_Click"/>
-                                    <Button Margin="3" Width="35" Content="و" Click="ain_Click"/>
-                                    <Button Margin="3" Width="35" Content="ف" Click="ain_Click"/>
+                                    <Button Margin="3" Width="35" Content="ب" Click="ba_Click"/>
+                                    <Button Margin="3" Width="35" Content="م" Click="mim_Click"/>
+                                    <Button Margin="3" Width="35" Content="و" Click="wau_Click"/>
+                                    <Button Margin="3" Width="35" Content="ف" Click="fa_Click"/>
                                 </StackPanel>
                         </StackPanel>
                     </ScrollViewer>
@@ -269,48 +267,52 @@
             <PivotItem Header="Harakat">
                 <ScrollViewer>
                     <Grid>
-                        <StackPanel Orientation="Vertical" Margin="0,0,0,10">
-                            <TextBlock TextWrapping="Wrap" 
-                                   Text="Harakat (حركات) merupakan tanda baca yang ditempatkan pada huruf hijaiyah untuk memperjelas gerakan dan pengucapan huruf tersebut."/>
+                        <StackPanel Name="harakatPanel" Orientation="Vertical" Margin="0,0,0,10">
+                        <StackPanel>
+                            <TextBlock TextWrapping="WrapWholeWords" 
+                                       Text="Harakat (حركات) merupakan tanda baca yang ditempatkan pada huruf hijaiyah untuk memperjelas gerakan dan pengucapan huruf tersebut."/>
                             <TextBlock TextWrapping="Wrap" Margin="0,5,0,0"
-                                   Text="Contoh tanpa harakat:"/>
+                                       Text="Contoh tanpa harakat:"/>
                             <TextBlock TextWrapping="Wrap" FontFamily="Arial" FontSize="30" Margin="0,5,0,10"
-                                   Text="قل اعوذ برب الناس"/>
+                                       Text="قل اعوذ برب الناس"/>
                             <TextBlock TextWrapping="Wrap"
-                                   Text="Contoh dengan harakat:"/>
+                                       Text="Contoh dengan harakat:"/>
                             <TextBlock TextWrapping="Wrap" FontFamily="Arial" FontSize="30" Margin="0,5,0,10"
-                                   Text="قُلْ اَعُوْذُ بِرَبِّ النَّاسِ"/>
+                                       Text="قُلْ اَعُوْذُ بِرَبِّ النَّاسِ"/>
+                        </StackPanel>
 
+                        <StackPanel>
                             <TextBlock Margin="0,5,0,0" 
                                            Text="Macam-macam harakat:"/>
                             <TextBlock Margin="0,5,0,0" FontSize="30" FontFamily="Arial" 
-                                           Text="( ــَــِــُـ )"/>
+                                               Text="( ــَــِــُـ )"/>
                             <TextBlock Text="Keterangan:"/>
                             <TextBlock TextWrapping="Wrap"
-                                           Text="1. Fathah ( ـَ ) untuk memberikan bunyi vokal 'a'"/>
+                                               Text="1. Fathah ( ـَ ) untuk memberikan bunyi vokal 'a'"/>
                             <TextBlock TextWrapping="Wrap"
-                                           Text="2. Kasrah ( ـِ ) untuk memberikan bunyi vokal 'i'"/>
+                                               Text="2. Kasrah ( ـِ ) untuk memberikan bunyi vokal 'i'"/>
                             <TextBlock TextWrapping="Wrap"
-                                           Text="3. Dhammah ( ـُ ) untuk memberikan bunyi vokal 'u'"/>
+                                               Text="3. Dhammah ( ـُ ) untuk memberikan bunyi vokal 'u'"/>
 
                             <TextBlock Margin="0,15,0,0" FontSize="30" FontFamily="Arial" 
-                                           Text="( ــًــٍــٌـ )"/>
+                                               Text="( ــًــٍــٌـ )"/>
                             <TextBlock Text="Keterangan:"/>
                             <TextBlock TextWrapping="Wrap"
-                                           Text="1. Fathatein ( ـً ) untuk memberikan bunyi vokal 'an'"/>
+                                               Text="1. Fathatein ( ـً ) untuk memberikan bunyi vokal 'an'"/>
                             <TextBlock TextWrapping="Wrap"
-                                           Text="2. Kasratein ( ـٍ ) untuk memberikan bunyi vokal 'in'"/>
+                                               Text="2. Kasratein ( ـٍ ) untuk memberikan bunyi vokal 'in'"/>
                             <TextBlock TextWrapping="Wrap"
-                                           Text="3. Dhammatein ( ـٌ ) untuk memberikan bunyi vokal 'un'"/>
+                                               Text="3. Dhammatein ( ـٌ ) untuk memberikan bunyi vokal 'un'"/>
 
                             <TextBlock Margin="0,15,0,0" FontSize="30" FontFamily="Arial" 
-                                           Text="( ــْــّـ )"/>
+                                               Text="( ــْــّـ )"/>
                             <TextBlock Text="Keterangan:"/>
                             <TextBlock TextWrapping="Wrap"
-                                           Text="1. Tanda sukun ( ـْ ) di atas sebuah huruf menunjukkan bahwa huruf tersebut mati"/>
+                                               Text="1. Tanda sukun ( ـْ ) di atas sebuah huruf menunjukkan bahwa huruf tersebut mati"/>
                             <TextBlock TextWrapping="Wrap"
-                                           Text="2. Tanda tasydid ( ـّ ) di atas suatu huruf menunjukkan bahwa huruf tersebut dibaca ganda, seperti  ن نْ = نّ "/>
+                                               Text="2. Tanda tasydid ( ـّ ) di atas suatu huruf menunjukkan bahwa huruf tersebut dibaca ganda, seperti  ن نْ = نّ "/>
                         </StackPanel>
+                    </StackPanel>
                     </Grid>
                 </ScrollViewer>
             </PivotItem>
