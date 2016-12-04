@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -26,12 +27,13 @@ namespace UWPIlmuTajwid
         {
             this.InitializeComponent();
 
-            //var settings = Windows.Storage.ApplicationData.Current.RoamingSettings;
+            var settings = Windows.Storage.ApplicationData.Current.RoamingSettings;
+            string currentTheme = settings.Values["currentTheme"] as string;
 
-            //if (settings.Values["currentTheme"] as string == "dark")
-            //    SwitchTheme_Toggle.IsOn = true;
-            //else
-            //    SwitchTheme_Toggle.IsOn = false;
+            if (currentTheme == "dark")
+                SwitchTheme.IsOn = true;
+            else
+                SwitchTheme.IsOn = false;
         }
 
         private void SwitchTheme_Toggled(object sender, RoutedEventArgs e)
@@ -40,18 +42,18 @@ namespace UWPIlmuTajwid
             var settings = Windows.Storage.ApplicationData.Current.RoamingSettings;
             if (settings.Values.ContainsKey("currentTheme"))
             {
-                currentTheme = (string)settings.Values["currentTheme"];
+                currentTheme = settings.Values["currentTheme"] as string;
                 settings.Values.Remove("currentTheme");
             }
 
-            settings.Values.Add("currentTheme", currentTheme == "light" ? "dark" : "light");
-            //if (settings.Values["currentTheme"] as string == "dark")
-            //    SwitchTheme_Toggle.IsOn = true;
-            //else
-            //    SwitchTheme_Toggle.IsOn = false;
+            if (SwitchTheme.IsOn == true)
+                settings.Values["currentTheme"] = "dark";
+            else
+                settings.Values["currentTheme"] = "light"; ;
 
+            Debug.WriteLine(settings.Values["currentTheme"] as string);
             NotifSwitchTheme.Text = "Mengubah tema membutuhkan memulai ulang aplikasi";
-            ValueSwitchTheme.Text = settings.Values["currentTheme"] as string;
+            //ValueSwitchTheme.Text = settings.Values["currentTheme"] as string;
         }
 
         private void SwitchThemeLight_Click(object sender, RoutedEventArgs e)
@@ -68,7 +70,7 @@ namespace UWPIlmuTajwid
             settings.Values.Add("currentTheme", currentTheme == "light");
 
             //NotifSwitchTheme.Text = "Mengubah tema membutuhkan memulai ulang aplikasi";
-            ValueSwitchTheme.Text = settings.Values["currentTheme"] as string;
+            //ValueSwitchTheme.Text = settings.Values["currentTheme"] as string;
         }
 
         private void SwitchThemeDark_Click(object sender, RoutedEventArgs e)

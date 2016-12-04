@@ -21,28 +21,38 @@
                    Text="MENU PENGATURAN" />
 
                 <Pivot Grid.Row="1">
+                    <!-- Tampilan -->
                     <PivotItem Header="Tampilan">
-                        <StackPanel>
-                            <ToggleSwitch Name="SwitchTheme_Toggle" 
+                        <StackPanel Margin="0,10">
+                            <ToggleSwitch Name="SwitchTheme" 
                                           Header="Tema"
                                           Toggled="SwitchTheme_Toggled" 
                                           OffContent="Terang" OnContent="Gelap"/>
                             <TextBlock Name="NotifSwitchTheme" Text=""/>
                             <TextBlock Name="ValueSwitchTheme" Text=""/>
-                            <!--
-                            <StackPanel>
-                                <RadioButton Name="SwitchThemeLight"
-                                             Content="Terang"
-                                             Click="SwitchThemeLight_Click"/>
-                                <RadioButton Name="SwitchThemeDark"
-                                             Content="Gelap"
-                                             Click="SwitchThemeDark_Click"/>
-                            </StackPanel>
-                            -->
                         </StackPanel>
                     </PivotItem>
+                    
+                    <!-- Tentang -->
                     <PivotItem Header="Tentang">
+                        <ScrollViewer Margin="0,10">
+                            <StackPanel>
+                                <Image Source="/Assets/Logo/UWPTajwid 200x200.png" 
+                                           Height="100" Margin="0,10"
+                                       HorizontalAlignment="Left"/>
+                                <TextBlock Text="Ilmu Tajwid"
+                                           Style="{StaticResource HeaderTextBlockStyle}"/>
+                                <TextBlock Text="v0.8.8.0"
+                                           Style="{StaticResource SubtitleTextBlockStyle}"/>
 
+                                <TextBlock Text="©2016 &#10;Ahmad Tantowi"
+                                           Margin="0,30,0,5"/>
+                                <TextBlock Text="Contact: &#10;ahmadtantowi@outlook.com"/>
+
+                                <TextBlock Text="Terima kasih spesial kepada: &#10;Yadi Setiawan"
+                                           Margin="0,20,0,5"/>
+                            </StackPanel>
+                        </ScrollViewer>
                     </PivotItem>
                 </Pivot>
             </Grid>
