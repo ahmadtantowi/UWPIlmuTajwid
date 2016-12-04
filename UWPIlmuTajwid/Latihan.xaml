@@ -16,7 +16,21 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="abcd.Orientation" Value="Horizontal"/>
-                        <!--Setter Target="btnNext.Margin" Value="0,30"/-->
+                        <Setter Target="_a.MinWidth" Value="300"/>
+                        <Setter Target="_b.MinWidth" Value="300"/>
+                        <Setter Target="_c.MinWidth" Value="300"/>
+                        <Setter Target="_d.MinWidth" Value="300"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="480"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="_a.MinWidth" Value="220"/>
+                        <Setter Target="_b.MinWidth" Value="220"/>
+                        <Setter Target="_c.MinWidth" Value="220"/>
+                        <Setter Target="_d.MinWidth" Value="220"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -32,37 +46,48 @@
                    Margin="12,10,12,0" 
                    Style="{StaticResource BaseTextBlockStyle}"
                    Text="LATIHAN" />
-        <StackPanel Grid.Row="1" Name="panelPertanyaan"
-                    HorizontalAlignment="Center" VerticalAlignment="Center">
+        
+        <StackPanel Grid.Row="1" 
+                    MinWidth="300"
+                    Name="panelPertanyaan"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center">
+            
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Name="textPertanyaan" 
+                           Text="Pertanyaan 10/10"
+                           Margin="5,15,55,0"/>
+                <AppBarButton Name="statusJawabanBenar" 
+                              Icon="Accept" Height="35" 
+                              Foreground="Green"
+                              IsEnabled="False"/>
+                <AppBarButton Name="statusJawabanSalah" 
+                              Icon="Cancel" Height="35"
+                              Foreground="Red"
+                              IsEnabled="False"/>
+            </StackPanel>
 
-            <TextBlock Text="Pertanyaan"
-                       Margin="5,20,5,0"/>
-
-            <Border MinWidth="300"
-                    Height="100" 
-                    Margin="5,0"
+            <Border Name="borderPertanyaan" MinWidth="300"
+                    Height="130" 
+                    Margin="5,5"
                     BorderThickness="2" 
                     BorderBrush="Gray" Background="White">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-
-                    <TextBox Grid.Row="0" 
-                             Name="boxPertanyaan"
-                             Margin="5" BorderThickness="0"
+                <StackPanel>
+                    <TextBox Name="boxPertanyaan"
+                             Height="115" Margin="5" 
+                             BorderThickness="0"
                              TextWrapping="Wrap"
                              IsReadOnly="True" 
-                             FontSize="20"
+                             VerticalAlignment="Center"
+                             FontSize="15"
                              />
-                    <TextBlock Grid.Row="1" 
-                               Name="boxKalimah"
-                               Margin="5"
+                    <TextBlock Name="boxKalimah"
+                               Height="0" Margin="5"
                                HorizontalAlignment="Center" 
                                Foreground="Black"
-                               FontSize="20"/>
-                </Grid>
+                               FontSize="25"
+                               FontFamily="Arial"/>
+                </StackPanel>
             </Border>
 
             <StackPanel Name="abcd" Orientation="Vertical">
@@ -92,14 +117,14 @@
                 </StackPanel>
             </StackPanel>
 
-            <TextBlock Name="statusJawaban"
+            <!--TextBlock Name="statusJawaban"
                        Style="{StaticResource SubheaderTextBlockStyle}" 
                        HorizontalAlignment="Center"
-                       Height="40"/>
+                       Height="40"/-->
 
             <Button Name="btnNext" Content="Lanjut >>"
                     Margin="0,20"
-                    Width="100"
+                    Width="150"
                     HorizontalAlignment="Center"
                     Click="btnNext_Click"/>
         </StackPanel>

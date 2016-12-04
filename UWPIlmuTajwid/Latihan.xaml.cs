@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 using SQLite.Net.Attributes;
 using System.Diagnostics;
+using Windows.Storage;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -28,28 +29,44 @@ namespace UWPIlmuTajwid
         string path;
         SQLite.Net.SQLiteConnection conn;
 
+        int jumlahPertanyaan = 0;   // maksimal 9
+        int jawabanBenar;
         string jawaban;
 
         public Latihan()
         {
             this.InitializeComponent();
 
-            path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
+            //path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
+            path = Path.Combine(Windows.ApplicationModel.Package.Current.InstalledLocation.Path, "Database", "db.sqlite");
 
             conn = new SQLite.Net.SQLiteConnection(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
             conn.CreateTable<tb_Pertanyaan>();
 
             // menampilkan path folder data aplikasi
-            Debug.WriteLine(Windows.Storage.ApplicationData.Current.LocalFolder.Path);
+            Debug.WriteLine(path);
 
-            getPertanyaan();
+            kalkulasiPertanyaan();
+        }
+
+        private void kalkulasiPertanyaan()
+        {
+            if (jumlahPertanyaan < 10)
+                getPertanyaan();
+            else
+                boxPertanyaan.Text = "SELAMAT! &#10; Anda berhasil menjawab pertanyaan sebanyak " + jawabanBenar + " buah";
+        }
+
+        private void kalkulasiJawaban(bool status)
+        {
+            if (status)
+                jawabanBenar += 1;
         }
 
         private int getIdPertanyaan()
         {
-            //var query = conn.Query<tb_Pertanyaan>("select IdPertanyaan from tb_Pertanyaan where);
             Random rnd = new Random();
-            int id = rnd.Next(1, 4);
+            int id = rnd.Next(1, 21);
 
             return id;
         }
@@ -81,12 +98,21 @@ namespace UWPIlmuTajwid
             if (pertanyaan != null)
                 boxPertanyaan.Text = pertanyaan;
             else
-                boxPertanyaan.Text = " ";
+                boxPertanyaan.Text = "";
+            textPertanyaan.Text = "Pertanyaan " + (jumlahPertanyaan + 1) + "/10";
 
             if (kalimah != null)
+            {
+                boxPertanyaan.Height = 70;
+                boxKalimah.Height = 40;
                 boxKalimah.Text = kalimah;
+            }
             else
-                boxKalimah.Text = " ";
+            {
+                boxPertanyaan.Height = 115;
+                boxKalimah.Height = 0;
+                boxKalimah.Text = "";
+            }
 
             _a.Content = "A. " + pilA;
             _b.Content = "B. " + pilB;
@@ -98,18 +124,20 @@ namespace UWPIlmuTajwid
             _b.IsEnabled = true;
             _c.IsEnabled = true;
             _d.IsEnabled = true;
+
+            // kalkulasi jumlah pertanyaan
+            jumlahPertanyaan += 1;
         }
 
         private void getResult(string _jawaban)
         {
             if(_jawaban == this.jawaban)
             {
-                statusJawaban.Text = "Benar!";
+                statusJawabanBenar.IsEnabled = true;
+                kalkulasiJawaban(true);
             }
             else
-            {
-                statusJawaban.Text = "Salah!";
-            }
+                statusJawabanSalah.IsEnabled = true;
 
             btnNext.IsEnabled = true;
             _a.IsEnabled = false;
@@ -142,9 +170,10 @@ namespace UWPIlmuTajwid
         {
             boxPertanyaan.Text = "";
             boxKalimah.Text = "";
-            statusJawaban.Text = "";
+            statusJawabanBenar.IsEnabled = false;
+            statusJawabanSalah.IsEnabled = false;
 
-            getPertanyaan();
+            kalkulasiPertanyaan();
         }
 
         /*
