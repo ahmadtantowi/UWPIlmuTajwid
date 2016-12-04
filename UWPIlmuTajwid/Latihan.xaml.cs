@@ -1,21 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 using SQLite.Net.Attributes;
 using System.Diagnostics;
-using Windows.Storage;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -54,7 +43,12 @@ namespace UWPIlmuTajwid
             if (jumlahPertanyaan < 10)
                 getPertanyaan();
             else
-                boxPertanyaan.Text = "SELAMAT! &#10; Anda berhasil menjawab pertanyaan sebanyak " + jawabanBenar + " buah";
+            {
+                boxPertanyaan.Text = "SELAMAT!" + Environment.NewLine +
+                    "Anda berhasil menjawab pertanyaan sebanyak " + jawabanBenar + " buah" +
+                    Environment.NewLine + "silahkan tekan tombol [ <- ] kembali";
+                boxPertanyaan.FontSize = 18;
+            }
         }
 
         private void kalkulasiJawaban(bool status)
@@ -95,31 +89,14 @@ namespace UWPIlmuTajwid
             }
             this.jawaban = jawaban;
 
-            if (pertanyaan != null)
-                boxPertanyaan.Text = pertanyaan;
-            else
-                boxPertanyaan.Text = "";
+            boxPertanyaan.Text = pertanyaan + Environment.NewLine + kalimah ;
             textPertanyaan.Text = "Pertanyaan " + (jumlahPertanyaan + 1) + "/10";
-
-            if (kalimah != null)
-            {
-                boxPertanyaan.Height = 70;
-                boxKalimah.Height = 40;
-                boxKalimah.Text = kalimah;
-            }
-            else
-            {
-                boxPertanyaan.Height = 115;
-                boxKalimah.Height = 0;
-                boxKalimah.Text = "";
-            }
 
             _a.Content = "A. " + pilA;
             _b.Content = "B. " + pilB;
             _c.Content = "C. " + pilC;
             _d.Content = "D. " + pilD;
 
-            btnNext.IsEnabled = false;
             _a.IsEnabled = true;
             _b.IsEnabled = true;
             _c.IsEnabled = true;
@@ -169,10 +146,11 @@ namespace UWPIlmuTajwid
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
             boxPertanyaan.Text = "";
-            boxKalimah.Text = "";
+            //boxKalimah.Text = "";
             statusJawabanBenar.IsEnabled = false;
             statusJawabanSalah.IsEnabled = false;
 
+            btnNext.IsEnabled = false;
             kalkulasiPertanyaan();
         }
 

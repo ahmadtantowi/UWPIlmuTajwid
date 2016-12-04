@@ -24,13 +24,15 @@
                 </VisualState>
                 <VisualState>
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="480"/>
+                        <AdaptiveTrigger MinWindowWidth="400"/>
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
+                        <Setter Target="abcd.Orientation" Value="Horizontal"/>
                         <Setter Target="_a.MinWidth" Value="220"/>
                         <Setter Target="_b.MinWidth" Value="220"/>
                         <Setter Target="_c.MinWidth" Value="220"/>
                         <Setter Target="_d.MinWidth" Value="220"/>
+                        <Setter Target="boxPertanyaan.Height" Value="100"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -52,7 +54,7 @@
                     Name="panelPertanyaan"
                     HorizontalAlignment="Center" 
                     VerticalAlignment="Center">
-            
+
             <StackPanel Orientation="Horizontal">
                 <TextBlock Name="textPertanyaan" 
                            Text="Pertanyaan 10/10"
@@ -67,28 +69,13 @@
                               IsEnabled="False"/>
             </StackPanel>
 
-            <Border Name="borderPertanyaan" MinWidth="300"
-                    Height="130" 
-                    Margin="5,5"
-                    BorderThickness="2" 
-                    BorderBrush="Gray" Background="White">
-                <StackPanel>
-                    <TextBox Name="boxPertanyaan"
-                             Height="115" Margin="5" 
-                             BorderThickness="0"
-                             TextWrapping="Wrap"
-                             IsReadOnly="True" 
-                             VerticalAlignment="Center"
-                             FontSize="15"
-                             />
-                    <TextBlock Name="boxKalimah"
-                               Height="0" Margin="5"
-                               HorizontalAlignment="Center" 
-                               Foreground="Black"
-                               FontSize="25"
-                               FontFamily="Arial"/>
-                </StackPanel>
-            </Border>
+            <TextBox Name="boxPertanyaan"
+                     Text="Pertanyaan &#10; بسيبس"
+                     Margin="5" Height="130"
+                     TextWrapping="Wrap"
+                     FontSize="25"
+                     IsReadOnly="True"
+                     FontFamily="Calibri"/>
 
             <StackPanel Name="abcd" Orientation="Vertical">
                 <StackPanel Name="ab">
@@ -116,11 +103,6 @@
                             Click="_d_Click"/>
                 </StackPanel>
             </StackPanel>
-
-            <!--TextBlock Name="statusJawaban"
-                       Style="{StaticResource SubheaderTextBlockStyle}" 
-                       HorizontalAlignment="Center"
-                       Height="40"/-->
 
             <Button Name="btnNext" Content="Lanjut >>"
                     Margin="0,20"
