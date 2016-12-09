@@ -118,7 +118,7 @@
     <Content Include="Assets\Suara\ya.mp3" />
     <Content Include="Assets\Suara\zai.mp3" />
     <Content Include="Assets\Suara\zha.mp3" />
-    <Content Include="Database\db.sqlite" />
+    <None Include="Database\db.sqlite" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +140,27 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tajwid.xaml.cs">
       <DependentUpon>Tajwid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TajwidAlifLam.xaml.cs">
+      <DependentUpon>TajwidAlifLam.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TajwidMad.xaml.cs">
+      <DependentUpon>TajwidMad.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TajwidMimMati.xaml.cs">
+      <DependentUpon>TajwidMimMati.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TajwidNunMati.xaml.cs">
+      <DependentUpon>TajwidNunMati.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TajwidQalqalah.xaml.cs">
+      <DependentUpon>TajwidQalqalah.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TajwidWaqaf.xaml.cs">
+      <DependentUpon>TajwidWaqaf.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ThemesGeneric.xaml.cs">
+      <DependentUpon>ThemesGeneric.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -186,6 +207,34 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Tajwid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TajwidAlifLam.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TajwidMad.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TajwidMimMati.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TajwidNunMati.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TajwidQalqalah.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TajwidWaqaf.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ThemesGeneric.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

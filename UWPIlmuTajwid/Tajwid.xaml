@@ -7,19 +7,105 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <SplitView x:Name="NavigationPane" DisplayMode="CompactInline">
+        <SplitView.Pane>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="44"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Button Name="HamburgerButton" Grid.Row="0"
+                        Style="{StaticResource MenuItemButtonStyle}"
+                        Tag="&#xE700;" Content="MENU TAJWID"
+                        Click="HamburgerButton_Click"/>
+
+                <StackPanel Name="NavigationMenu" Grid.Row="1">
+                    <RadioButton Name="panelAlifLam"
+                                 GroupName="GroupTajwid"
+                                 Style="{StaticResource NavigationButtonStyle}"
+                                 Tag="&#xE7BC;" 
+                                 Content="Alif lam"
+                                 Checked="panelAlifLam_Checked"/>
+                    <RadioButton Name="panelNunMati"
+                                 GroupName="GroupTajwid"
+                                 Style="{StaticResource NavigationButtonStyle}"
+                                 Tag="&#xE7BC;"
+                                 Content="Nun mati/tanwin"
+                                 Checked="panelNunMati_Checked"/>
+                    <RadioButton Name="panelMimMati"
+                                 GroupName="GroupTajwid"
+                                 Style="{StaticResource NavigationButtonStyle}"
+                                 Tag="&#xE7BC;"
+                                 Content="Mim mati"
+                                 Checked="panelMimMati_Checked"/>
+                    <RadioButton Name="panelMad"
+                                 GroupName="GroupTajwid"
+                                 Style="{StaticResource NavigationButtonStyle}"
+                                 Tag="&#xE7BC;"
+                                 Content="Mad"
+                                 Checked="panelMad_Checked"/>
+                    <RadioButton Name="panelQalqalah"
+                                 GroupName="GroupTajwid"
+                                 Style="{StaticResource NavigationButtonStyle}"
+                                 Tag="&#xE7BC;"
+                                 Content="Qalqalah"
+                                 Checked="panelQalqalah_Checked"/>
+                    <RadioButton Name="panelWaqaf"
+                                 GroupName="GroupTajwid"
+                                 Style="{StaticResource NavigationButtonStyle}"
+                                 Tag="&#xE7BC;"
+                                 Content="Waqaf"
+                                 Checked="panelWaqaf_Checked"/>
+                </StackPanel>
+            </Grid>
+        </SplitView.Pane>
+
+        <SplitView.Content>
+            <Frame x:Name="Content">
+                <Frame.ContentTransitions>
+                    <TransitionCollection>
+                        <NavigationThemeTransition>
+                            <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                                <EntranceNavigationTransitionInfo/>
+                            </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                        </NavigationThemeTransition>
+                    </TransitionCollection>
+                </Frame.ContentTransitions>
+                <StackPanel>
+                    <TextBlock Text="MENU TAJWID" 
+                               Style="{StaticResource BaseTextBlockStyle}" 
+                               Margin="12,13"/>
+                    <TextBlock Text="... وَرَتِّلِ الْقُرْءَانَ تَرْتِيْلاً"
+                               FontFamily="Arial"
+                               FontSize="30"
+                               Margin="12"
+                               HorizontalAlignment="Center"/>
+                    <TextBlock Text="''... Dan bacalah Al-Qur'an itu dengan perlahan/tartil (bertajwid)''" 
+                               FontStyle="Italic"
+                               Margin="12,5,12,0"/>
+                    <TextBlock Text="- QS Al-Muzzammil(73): 4"
+                               Margin="12,5"/>
+                </StackPanel>
+            </Frame>
+        </SplitView.Content>
+    </SplitView>
+
+    <!--Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0"
+        
+
+        <!-TextBlock Grid.Row="0"
                    Margin="12,10,12,0" 
                    Style="{StaticResource BaseTextBlockStyle}"
                    Text="MENU TAJWID" />
 
         <Pivot Grid.Row="1">
-            <!-- ALIF LAM -->
+            <!- ALIF LAM ->
             <PivotItem Header="Alif lam">
                 <StackPanel>
                     <StackPanel Name="panelAlifLam" Orientation="Vertical">
@@ -63,7 +149,7 @@
                 </StackPanel>
             </PivotItem>
 
-            <!-- NUN MATI/TANWIN -->
+            <!- NUN MATI/TANWIN ->
             <PivotItem Header="Nun mati/tanwin">
                 <StackPanel>
                     <StackPanel Name="panelNunMati" Orientation="Vertical">
@@ -116,7 +202,7 @@
                 </StackPanel>
             </PivotItem>
 
-            <!-- MIM SUKUN -->
+            <!- MIM SUKUN ->
             <PivotItem Header="Mim mati">
                 <StackPanel>
                     <StackPanel Name="panelMimMati" Orientation="Vertical">
@@ -165,7 +251,7 @@
                 </StackPanel>
             </PivotItem>
 
-            <!-- MAD -->
+            <!- MAD ->
             <PivotItem Header="Mad">
                 <StackPanel>
                     <StackPanel Name="panelMad" Orientation="Vertical">
@@ -204,7 +290,7 @@
                 </StackPanel>
             </PivotItem>
 
-            <!-- QALQALAH -->
+            <!- QALQALAH ->
             <PivotItem Header="Qalqalah">
                 <StackPanel>
                     <StackPanel Name="panelQalqalah" Orientation="Vertical">
@@ -241,7 +327,7 @@
                 </StackPanel>
             </PivotItem>
             
-            <!-- WAQAF -->
+            <!- WAQAF ->
             <PivotItem Header="Waqaf">
                 <ScrollViewer>
                     <StackPanel>
@@ -252,8 +338,8 @@
                     </StackPanel>
                 </ScrollViewer>
             </PivotItem>
-        </Pivot>
-    </Grid>
+        </Pivot->
+    </-->
     
     <!--
         &#10; -> line break

@@ -1,0 +1,113 @@
+﻿<Page
+    x:Class="UWPIlmuTajwid.TajwidWaqaf"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPIlmuTajwid"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <SplitView x:Name="NavigationPane" DisplayMode="CompactInline">
+        <SplitView.Pane>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="44"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Button Name="HamburgerButton" Grid.Row="0"
+                        Style="{StaticResource MenuItemButtonStyle}"
+                        Tag="&#xE700;" Content="MENU TAJWID"
+                        Click="HamburgerButton_Click"/>
+
+                <StackPanel Name="NavigationMenu" Grid.Row="1">
+                    <RadioButton Name="panelAlifLam"
+                                 GroupName="GroupTajwid"
+                                 Style="{StaticResource NavigationButtonStyle}"
+                                 Tag="&#xE7BC;" 
+                                 Content="Alif lam"
+                                 Checked="panelAlifLam_Checked"/>
+                    <RadioButton Name="panelNunMati"
+                                 GroupName="GroupTajwid"
+                                 Style="{StaticResource NavigationButtonStyle}"
+                                 Tag="&#xE7BC;"
+                                 Content="Nun mati/tanwin"
+                                 Checked="panelNunMati_Checked"/>
+                    <RadioButton Name="panelMimMati"
+                                 GroupName="GroupTajwid"
+                                 Style="{StaticResource NavigationButtonStyle}"
+                                 Tag="&#xE7BC;"
+                                 Content="Mim mati"
+                                 Checked="panelMimMati_Checked"/>
+                    <RadioButton Name="panelMad"
+                                 GroupName="GroupTajwid"
+                                 Style="{StaticResource NavigationButtonStyle}"
+                                 Tag="&#xE7BC;"
+                                 Content="Mad"
+                                 Checked="panelMad_Checked"/>
+                    <RadioButton Name="panelQalqalah"
+                                 GroupName="GroupTajwid"
+                                 Style="{StaticResource NavigationButtonStyle}"
+                                 Tag="&#xE7BC;"
+                                 Content="Qalqalah"
+                                 Checked="panelQalqalah_Checked"/>
+                    <RadioButton Name="panelWaqaf"
+                                 GroupName="GroupTajwid"
+                                 Style="{StaticResource NavigationButtonStyle}"
+                                 Tag="&#xE7BC;"
+                                 Content="Waqaf"
+                                 Checked="panelWaqaf_Checked"/>
+                </StackPanel>
+            </Grid>
+        </SplitView.Pane>
+
+        <SplitView.Content>
+            <Frame x:Name="Content">
+                <Frame.ContentTransitions>
+                    <TransitionCollection>
+                        <NavigationThemeTransition>
+                            <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                                <EntranceNavigationTransitionInfo/>
+                            </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                        </NavigationThemeTransition>
+                    </TransitionCollection>
+                </Frame.ContentTransitions>
+                <StackPanel>
+                    <TextBlock Text="WAQAF" 
+                               Style="{StaticResource BaseTextBlockStyle}" 
+                               Margin="12,13"/>
+                    <Pivot>
+                        <PivotItem Header="Penjelasan">
+                            <ScrollViewer>
+                                <StackPanel>
+                                    <TextBlock Name="PengertianWaqaf" TextWrapping="Wrap"/>
+                                    <TextBlock Text="Jenis-jenis waqaf:" Margin="0,10,0,0"/>
+                                    <TextBlock Name="JenisWaqaf" TextWrapping="Wrap"/>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </PivotItem>
+                        
+                        <PivotItem Header="Tanda waqaf">
+                            <ScrollViewer>
+                                <StackPanel>
+                                    <TextBlock Text="1. Waqaf lazim" FontSize="18"/>
+                                    <TextBlock Text="2. Waqaf mutlak" FontSize="18"/>
+                                    <TextBlock Text="3. Waqaf jaiz" FontSize="18"/>
+                                    <TextBlock Text="4. Waqaf waslu ula" FontSize="18"/>
+                                    <TextBlock Text="5. Waqaf la washal" FontSize="18"/>
+                                    <TextBlock Text="5. Waqaf waqfu ula" FontSize="18"/>
+                                    <TextBlock Text="7. Waqaf mu'anaqah" FontSize="18"/>
+                                    <TextBlock Text="8. Waqaf mustahab" FontSize="18"/>
+                                    <TextBlock Text="9. Waqaf mujawwaz" FontSize="18"/>
+                                    <TextBlock Text="10. Waqaf murakhas" FontSize="18"/>
+                                    <TextBlock Text="11. Waqaf qabih" FontSize="18"/>
+                                    <TextBlock Text="12. Waqaf saktah" FontSize="18"/>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </PivotItem>
+                    </Pivot>
+                </StackPanel>
+            </Frame>
+        </SplitView.Content>
+    </SplitView>
+</Page>
