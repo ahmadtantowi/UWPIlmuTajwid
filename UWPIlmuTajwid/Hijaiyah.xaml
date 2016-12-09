@@ -133,6 +133,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
                     <!--Image x:Name="makhrajImage" 
@@ -151,56 +152,105 @@
 
                             <StackPanel>
                                 <TextBlock Text="Al-Jauf (rongga mulut):"/>
-                                <RelativePanel>
+                                <StackPanel>
+                                    <TextBlock Name="Aljauf" TextWrapping="Wrap"/>
                                     <StackPanel Orientation="Horizontal">
                                         <Button Margin="3" Width="35" Content="ا" Click="alif_Click"/>
                                         <Button Margin="3" Width="35" Content="و" Click="wau_Click"/>
                                         <Button Margin="3" Width="35" Content="ي" Click="ya_Click"/>
                                     </StackPanel>
-                                </RelativePanel>
+                                </StackPanel>
+
+                                <TextBlock/>
 
                                 <TextBlock Text="Al-Halqu (tenggorokan):"/>
+                                <TextBlock Name="Alhalqu" TextWrapping="Wrap"/>
                                 <StackPanel Orientation="Horizontal">
                                     <Button Margin="3" Width="35" Content="ء" Click="hamzah_Click"/>
+                                    <Button Margin="3" Width="35" Content="ه" Click="hha_Click"/>
+                                </StackPanel>
+                                <TextBlock Text="1. Pangkal tenggorokan, yaitu hamzah dan hha"/>
+                                <StackPanel Orientation="Horizontal">
                                     <Button Margin="3" Width="35" Content="ح" Click="ha_Click"/>
                                     <Button Margin="3" Width="35" Content="ع" Click="ain_Click"/>
-                                    <Button Margin="3" Width="35" Content="ه" Click="hha_Click"/>
+                                </StackPanel>
+                                <TextBlock Text="2. Pertengahan tenggorokan, yaitu ha dan 'ain"/>
+                                <StackPanel Orientation="Horizontal">
                                     <Button Margin="3" Width="35" Content="غ" Click="ghain_Click"/>
                                     <Button Margin="3" Width="35" Content="خ" Click="kha_Click"/>
                                 </StackPanel>
+                                <TextBlock Text="3. Ujung tenggorokan, yaitu ghain dan kha"/>
 
+                                <TextBlock/>
+                                
                                 <TextBlock Text="Al-Lisanu (lidah):"/>
-                                <StackPanel Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Visible" UseLayoutRounding="True" >
-                                    <Button Margin="3" Width="35" Content="ق" Click="qaf_Click"/>
-                                    <Button Margin="3" Width="35" Content="ك" Click="kaf_Click"/>
+                                <TextBlock Name="Allisanu" TextWrapping="Wrap"/>
+                                <Button Margin="3" Width="35" Content="ق" Click="qaf_Click"/>
+                                <TextBlock Text="1. Pangkal lidah dan langit-langit mulut bagian belakang, yaitu huruf Qof (ق). Maksudnya bunyi huruf qof ini keluar dari pangkal lidah dekat dengan kerongkongan yang dihimpitkan ke langit-langit mulut bagian belakang"/>
+                                <Button Margin="3" Width="35" Content="ك" Click="kaf_Click"/>
+                                <TextBlock Text="2. Pangkal lidah bagian tengah dan langit-langit mulut bagian tengah, yaitu huruf Kaf (ك). Maksudnya bunyi huruf kaf ini keluar dari pangkal lidah di depan makhraj huruf qof, yang dihimpitkan ke langit-langit bagian mulut bagian tengah"/>
+                                <StackPanel Orientation="Horizontal">
                                     <Button Margin="3" Width="35" Content="ج" Click="jim_Click"/>
                                     <Button Margin="3" Width="35" Content="ش" Click="syin_Click"/>
                                     <Button Margin="3" Width="35" Content="ي" Click="ya_Click"/>
-                                    <Button Margin="3" Width="35" Content="ض" Click="dhad_Click"/>
-                                    <Button Margin="3" Width="35" Content="ل" Click="lam_Click"/>
-                                    <Button Margin="3" Width="35" Content="ن" Click="nun_Click"/>
-                                    <Button Margin="3" Width="35" Content="ر" Click="ra_Click"/>
+                                </StackPanel>
+                                <TextBlock Text="3. Tengah-tengah lidah, yaitu huruf Jim ( ج ), Syin ( ش ) dan Ya' ( ي ). Maksudnya bunyi huruf-huruf tersebut keluar dari tengah-tengah lidah tepat, serta menepati langit-langit mulut yang tepat di atasnya"/>
+                                <Button Margin="3" Width="35" Content="ض" Click="dhad_Click"/>
+                                <TextBlock Text="4. Pangkat tepi lidah, yaitu huruf Dlod ( ض ). Maksudnya bunyi huruf Dlod ( ض ) keluar dari tepi lidah (boleh tepi lidah kanan atau kiri) hingga sambung dengan makhrojnya huruf lam, serta menepati graham"/>
+                                <Button Margin="3" Width="35" Content="ل" Click="lam_Click"/>
+                                <TextBlock Text="5. Ujung tepi lidah, yaitu huruf Lam (ل). Maksudnya bunyi huruf Lam (ل) keluar dari tepi lidah (sebelah kiri/kanan) hingga penghabisan ujung lidah, serta menepati dengan langit-langit mulut atas"/>
+                                <Button Margin="3" Width="35" Content="ن" Click="nun_Click"/>
+                                <TextBlock Text="6. Ujung lidah, yaitu huruf Nun (ن). Maksudnya bunyi huruf Nun (ن) keluar dari ujung lidah (setelah makhrojnya Lam (ل), lebih masuk sedikit ke dasar lidah dari pada Lam (ل)), serta menepati dengan langit-langit mulut atas"/>
+                                <Button Margin="3" Width="35" Content="ر" Click="ra_Click"/>
+                                <TextBlock Text="7. Ujung lidah tepat, yaitu huruf Ro' (ر). Maksudnya bunyi huruf Ro' (ر) keluar dari ujung lidah tepat (setelah makhrojnya Nun dan lebih masuk ke dasar lidah dari pda Nun), serta menepati dengan langit-langit mulut atas"/>
+                                <StackPanel Orientation="Horizontal">
                                     <Button Margin="3" Width="35" Content="د" Click="dal_Click"/>
                                     <Button Margin="3" Width="35" Content="ت" Click="ta_Click"/>
                                     <Button Margin="3" Width="35" Content="ط" Click="tha_Click"/>
+                                </StackPanel>
+                                <TextBlock Text="8. Kulit gusi atas, yaitu Dal (د), Ta' (ت) dan Tho' (ط). Maksudnya bunyi huruf-huruf tersebut keluar dari ujung lidah, serta menepat i dengan pangkal dua gigi seri yang atas"/>
+                                <StackPanel Orientation="Horizontal">
                                     <Button Margin="3" Width="35" Content="ص" Click="shad_Click"/>
                                     <Button Margin="3" Width="35" Content="س" Click="sin_Click"/>
                                     <Button Margin="3" Width="35" Content="ز" Click="zai_Click"/>
+                                </StackPanel>
+                                <TextBlock Text="9. Runcing lidah, yaitu huruf Shod (ص), Sin (س) dan Za' (ز). Maksudnya bunyi huruf-huruf tersebut keluar dari ujung lidah, serta menepati ujung dua gigi seri yang bawah"/>
+                                <StackPanel Orientation="Horizontal">
                                     <Button Margin="3" Width="35" Content="ظ" Click="zha_Click"/>
                                     <Button Margin="3" Width="35" Content="ث" Click="tsa_Click"/>
                                     <Button Margin="3" Width="35" Content="ذ" Click="dzal_Click"/>
                                 </StackPanel>
+                                <TextBlock Text="10. Gusi, yaitu huruf Dho' (ظ), Tsa' (ث) dan Dzal (ذ). Maksudnya huruf-huruf tersebut keluar dari ujung lidah, serta menepati dengan ujung dua gigi seri yang atas"/>
+
+                                <TextBlock/>
 
                                 <TextBlock Text="Asy-Syafatain (dua bibir):"/>
+                                <TextBlock Name="Asysayafatain" TextWrapping="Wrap"/>
+                                <Button Margin="3" Width="35" Content="ف" Click="fa_Click"/>
+                                <TextBlock Text="1. Fa' (ف) keluar dari dalamnya bibir yang bawah, serta menepati dengan ujung dua gigi seri yang atas"/>
                                 <StackPanel Orientation="Horizontal">
                                     <Button Margin="3" Width="35" Content="ب" Click="ba_Click"/>
                                     <Button Margin="3" Width="35" Content="م" Click="mim_Click"/>
                                     <Button Margin="3" Width="35" Content="و" Click="wau_Click"/>
-                                    <Button Margin="3" Width="35" Content="ف" Click="fa_Click"/>
                                 </StackPanel>
+                                <TextBlock Text="2. Wawu, Ba, Mim (و , ب , م) keluar dari antara dua bibir (antara bibir atas dan bawah). Hanya saja untuk Wawu bibir membuka, sedangkan untuk Ba dan Mim bibir membungkam"/>
+
+                                <TextBlock/>
+
+                                <TextBlock Text="Al-Khaisyum (pangkal hidung)"/>
+                                <TextBlock Name="Alkhaisyum" TextWrapping="Wrap"/>
+                                <TextBlock Text="1. Nun bertasydid (نّ)"/>
+                                <TextBlock Text="2. Mim bertasydid (مّ)"/>
+                                <TextBlock Text="3. Mim sukun yang bertemu dengan mim (م) atau ba (ب)"/>
+
                             </StackPanel>
                         </StackPanel>
                     </ScrollViewer>
+
+                    <!--StackPanel Grid.Row="2">
+                        <TextBlock Name="HurufMakhraj" Margin="0,5,0,0" Text="Huruf"/>
+                        <TextBlock Name="PenjelasanMakhraj" Margin="0,0,0,5" Text="Penjelasan"/>
+                    </-->
                 </Grid>
             </PivotItem>
 

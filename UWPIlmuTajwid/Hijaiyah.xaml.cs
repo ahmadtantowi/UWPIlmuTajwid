@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
+﻿using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -25,6 +13,22 @@ namespace UWPIlmuTajwid
         public Hijaiyah()
         {
             this.InitializeComponent();
+            LoadContent();
+        }
+
+        string aljauf = "Yaitu tempat keluarnya huruf hijaiyah yang terletak pada rongga mulut dan rongga tenggorokan. Bunyi huruf yang keluar dari rongga mulut dan rongga tenggorokan ada tiga macam, yaitu; alif (ا), wawu mati (وْ) dan ya mati (يْ) dengan penjelasan sebagai berikut:";
+        string alhalqu = "Yaitu tempat keluar bunyi huruf hijaiyah yang terletak pada kerongkongan / tenggorokan. Dan berdasarkan perbedaan teknis pelafalannya, huruf-huruf halqiyah (huruf-huruf yang keluar dari tenggorokan) dibagi menjadi tiga bagian yaitu:";
+        string allisanu = "Bunyi huruf hijaiyah dengan tempat keluarnya dari lidah ada 18 huruf, yaitu: Berdasarkan delapan belas huruf itu dapat dikelompokkan menjadi 10 makhraj, yaitu sebagai berikut:";
+        string asysyafatain = "Yaitu tempat keluarnya huruf hijaiyah yang terletak pada kedua bibir. Yang termasuk huruf-huruf syafatain ialah wawu (و), fa’ (ف), mim (م) dan ba’ (ب) dengan perincian sebagai berikut:";
+        string alkhaisyum = "Yaitu tempat keluarnya huruf hijaiyah yang terletak pada janur hidung. Dan jika kita menutup hidung ketika membunyikan huruf tersebut, maka tidak dapat terdengar. Adapun huruf-hurufnya yaitu huruf-huruf ghunnah mim dan nun dengan ketentuan sebagai berikut:";
+
+        void LoadContent()
+        {
+            Aljauf.Text = aljauf;
+            Alhalqu.Text = alhalqu;
+            Allisanu.Text = allisanu;
+            Asysayafatain.Text = asysyafatain;
+            Alkhaisyum.Text = alkhaisyum;
         }
 
         private void alif_Click(object sender, RoutedEventArgs e)

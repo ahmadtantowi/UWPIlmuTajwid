@@ -60,7 +60,7 @@ namespace UWPIlmuTajwid
         private int getIdPertanyaan()
         {
             Random rnd = new Random();
-            int id = rnd.Next(1, 21);
+            int id = rnd.Next(1, 41);
 
             return id;
         }

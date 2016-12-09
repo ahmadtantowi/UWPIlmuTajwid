@@ -49,7 +49,7 @@
                                            Margin="0,30,0,5"/>
                                 <TextBlock Text="Contact: &#10;ahmadtantowi@outlook.com"/>
 
-                                <TextBlock Text="Terima kasih spesial kepada: &#10;Yadi Setiawan"
+                                <TextBlock Text="Terima kasih kepada: &#10;Yadi Setiawan"
                                            Margin="0,20,0,5"/>
                             </StackPanel>
                         </ScrollViewer>
