@@ -128,9 +128,6 @@
     <Compile Include="Hijaiyah.xaml.cs">
       <DependentUpon>Hijaiyah.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Latihan.xaml.cs">
-      <DependentUpon>Latihan.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -191,10 +188,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Hijaiyah.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Latihan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
