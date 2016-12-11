@@ -1,0 +1,115 @@
+﻿<Page
+    x:Class="UWPIlmuTajwid.Latihan"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPIlmuTajwid"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="w640">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="640"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="abcd.Orientation" Value="Horizontal"/>
+                        <Setter Target="_a.MinWidth" Value="300"/>
+                        <Setter Target="_b.MinWidth" Value="300"/>
+                        <Setter Target="_c.MinWidth" Value="300"/>
+                        <Setter Target="_d.MinWidth" Value="300"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="400"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="abcd.Orientation" Value="Horizontal"/>
+                        <Setter Target="_a.MinWidth" Value="220"/>
+                        <Setter Target="_b.MinWidth" Value="220"/>
+                        <Setter Target="_c.MinWidth" Value="220"/>
+                        <Setter Target="_d.MinWidth" Value="220"/>
+                        <Setter Target="boxPertanyaan.Height" Value="100"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Margin="12,10,12,0" 
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="LATIHAN" />
+
+        <StackPanel Grid.Row="1" 
+                    MinWidth="300"
+                    Name="panelPertanyaan"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center">
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Name="textPertanyaan" 
+                           Text="Pertanyaan 10/10"
+                           Margin="5,15,55,0"/>
+                <AppBarButton Name="statusJawabanBenar" 
+                              Icon="Accept" Height="35" 
+                              Foreground="Green"
+                              IsEnabled="False"/>
+                <AppBarButton Name="statusJawabanSalah" 
+                              Icon="Cancel" Height="35"
+                              Foreground="Red"
+                              IsEnabled="False"/>
+            </StackPanel>
+
+            <TextBox Name="boxPertanyaan"
+                     Text="Pertanyaan &#10; بسيبس"
+                     Margin="5" Height="130"
+                     TextWrapping="Wrap"
+                     FontSize="25"
+                     IsReadOnly="True"
+                     FontFamily="Calibri"/>
+
+            <StackPanel Name="abcd" Orientation="Vertical">
+                <StackPanel Name="ab">
+                    <Button Name="_a" Content="A."
+                            Margin="5"
+                            MinWidth="300"
+                            HorizontalContentAlignment="Left"
+                            Click="_a_Click"/>
+                    <Button Name="_b" Content="B."
+                            Margin="5"
+                            MinWidth="300"
+                            HorizontalContentAlignment="Left"
+                            Click="_b_Click"/>
+                </StackPanel>
+                <StackPanel Name="cd">
+                    <Button Name="_c" Content="C."
+                            Margin="5"
+                            MinWidth="300"
+                            HorizontalContentAlignment="Left"
+                            Click="_c_Click"/>
+                    <Button Name="_d" Content="D."
+                            Margin="5"
+                            MinWidth="300"
+                            HorizontalContentAlignment="Left"
+                            Click="_d_Click"/>
+                </StackPanel>
+            </StackPanel>
+
+            <Button Name="btnNext" Content="Lanjut >>"
+                    Margin="0,20"
+                    Width="150"
+                    HorizontalAlignment="Center"
+                    IsEnabled="False"
+                    Click="btnNext_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -17,7 +17,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PackageCertificateKeyFile>UWPIlmuTajwid_TemporaryKey.pfx</PackageCertificateKeyFile>
-    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>arm</AppxBundlePlatforms>
   </PropertyGroup>
@@ -118,7 +118,9 @@
     <Content Include="Assets\Suara\ya.mp3" />
     <Content Include="Assets\Suara\zai.mp3" />
     <Content Include="Assets\Suara\zha.mp3" />
-    <None Include="Database\db.sqlite" />
+    <Content Include="Database\db.sqlite">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +129,9 @@
     </Compile>
     <Compile Include="Hijaiyah.xaml.cs">
       <DependentUpon>Hijaiyah.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Latihan.xaml.cs">
+      <DependentUpon>Latihan.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -188,6 +193,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Hijaiyah.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Latihan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
