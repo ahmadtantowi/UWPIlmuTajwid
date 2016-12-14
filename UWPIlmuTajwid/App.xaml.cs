@@ -2,7 +2,9 @@
 using System.Diagnostics;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.Foundation;
 using Windows.UI.Core;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -32,6 +34,10 @@ namespace UWPIlmuTajwid
                 this.RequestedTheme = ApplicationTheme.Light;
 
             Debug.WriteLine("current theme = " + currentTheme);
+
+            //ApplicationView.PreferredLaunchViewSize = new Size(480, 800);
+            //ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+            //ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(200, 100));
         }
 
         /// <summary>

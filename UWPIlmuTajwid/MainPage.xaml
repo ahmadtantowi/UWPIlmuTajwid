@@ -19,14 +19,28 @@
                         <Setter Target="menuPanel.Orientation" Value="Horizontal"/>
                     </VisualState.Setters>
                 </VisualState>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="menuPanel.Orientation" Value="Horizontal"/>
+                        <Setter Target="menu.Margin" Value="30"/>
+                        <Setter Target="menuHijaiyah.Margin" Value="30,10"/>
+                        <Setter Target="menuTajwid.Margin" Value="30,10"/>
+                        <Setter Target="menuLatihan.Margin" Value="30,10"/>
+                        <Setter Target="menuPengaturan.Margin" Value="30,10"/>
+                    </VisualState.Setters>
+                </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
         <StackPanel x:Name="menuPanel" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
             <!-- LOGO -->
-            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel x:Name="logo" 
+                        HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Image Height="150" 
-                       Margin="30,10,30,0"
+                       Margin="30,20,30,0"
                        Source="Assets/Logo/UWPTajwid 200x200.png"/>
                 <TextBlock HorizontalAlignment="Center" 
                            Margin="10,0,10,10" Style="{StaticResource HeaderTextBlockStyle}"
@@ -34,7 +48,7 @@
             </StackPanel>
 
             <!-- MENU -->
-            <StackPanel>
+            <StackPanel x:Name="menu">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.RowDefinitions>

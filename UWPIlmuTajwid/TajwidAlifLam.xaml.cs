@@ -32,7 +32,7 @@ namespace UWPIlmuTajwid
         public string caraBacaAssyamsiyah = "Yaitu dengan memasukkan alim-lam sukun ke huruf-huruf syamsiyah, sehingga bacaan lam sukunnya hilang dan lebur ke dalam huruf syamsiyah yang mengikutinya";
         public string huruf2Assyamsiyah = "ت ث د ذ ر ز س ش ص ض ط ظ ل ن";
 
-        public string pengertianAlqamariyah = "Alif lam qamariah merupakan alim-lam yang dirangkai dengan kata benda (isim) yang diwawali dengan salah satu huruf qamariyah. Secara bahasa, qamariyah adalah bulan. Alif lam qamariyah ditandai dengan sukun/mati;";
+        public string pengertianAlqamariyah = "Alif lam qamariah merupakan alim-lam yang dirangkai dengan kata benda (isim) yang diwawali dengan salah satu huruf qamariyah. Secara bahasa, qamariyah adalah bulan. Alif lam qamariyah ditandai dengan sukun/mati";
         public string caraBacaAlqamariyah = "Yakni dengan tetap dibaca lam sukunnya";
         public string huruf2Alqamariyah = "ا ب ج ح خ ع غ ف ق ك م ه و ي";
 
@@ -79,6 +79,11 @@ namespace UWPIlmuTajwid
         private void panelWaqaf_Checked(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(TajwidWaqaf));
+        }
+
+        private void panelHome_Checked(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
         }
     }
 }

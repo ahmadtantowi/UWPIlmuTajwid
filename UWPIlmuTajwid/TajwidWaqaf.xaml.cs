@@ -28,11 +28,16 @@ namespace UWPIlmuTajwid
             LoadContent();
         }
 
-        string pengertianWaqaf = "Waqaf secara bahasa memiliki arti berhenti. &#10;Sedangkan secara istilah, waqaf yaitu menghentikan bacaan sejenak pada akhir kalimat ataupun pada pertengahan kalimat";
-        string jenisWaqaf = "1. Waqaf sempurna (taam) &#10;yaitu waqaf pada suatu kalimat yang dibaca secara sempurna tanpa melakuakan pemotongan di tengah-tengah bacaan, serta tidak mempengaruhi arti karena tidak berhubungan dengan bacaan sebelumnya ataupun selanjutnya &#10;" + 
-            "2. Waqaf memadai (kkaf) &#10;yaitu waqaf pada suatu kalimat yang dibaca secara sempurna tanpa melakukan pemotongan kalimat di tengah-tengah, namun masih berhubungan arti dengan kalimat sebelum atau sesudahnya &#10;" + 
-            "3. Waqaf baik (hasan) &#10;yaitu mewaqafkan kalimat yang tidak mempengaruhi arti, namun kalimat tersebut masih berhubungan dengan kalimat sesudahnya &#10;" +
-            "4. Waqaf buruk (qabiih) &#10;yaitu mewaqafkan ditengah kalimat dengan membaca tidak sepurna sehingga mempengaruhi makna yang berkaitan dengan kalimat yang lainnya, waqaf ini harus dihindari";
+        string pengertianWaqaf = "Waqaf secara bahasa memiliki arti berhenti." + Environment.NewLine + 
+            "Sedangkan secara istilah, waqaf yaitu menghentikan bacaan sejenak pada akhir kalimat ataupun pada pertengahan kalimat";
+        string jenisWaqaf = "1. Waqaf sempurna (taam)" + Environment.NewLine +
+            "yaitu waqaf pada suatu kalimat yang dibaca secara sempurna tanpa melakuakan pemotongan di tengah-tengah bacaan, serta tidak mempengaruhi arti karena tidak berhubungan dengan bacaan sebelumnya ataupun selanjutnya" + Environment.NewLine + 
+            "2. Waqaf memadai (kaaf)" + Environment.NewLine + 
+            "yaitu waqaf pada suatu kalimat yang dibaca secara sempurna tanpa melakukan pemotongan kalimat di tengah-tengah, namun masih berhubungan arti dengan kalimat sebelum atau sesudahnya" + Environment.NewLine +
+            "3. Waqaf baik (hasan)" + Environment.NewLine +
+            "yaitu mewaqafkan kalimat yang tidak mempengaruhi arti, namun kalimat tersebut masih berhubungan dengan kalimat sesudahnya" + Environment.NewLine +
+            "4. Waqaf buruk (qabiih)" +Environment.NewLine +
+            "yaitu mewaqafkan ditengah kalimat dengan membaca tidak sepurna sehingga mempengaruhi makna yang berkaitan dengan kalimat yang lainnya, waqaf ini harus dihindari";
 
         void LoadContent()
         {
@@ -73,6 +78,11 @@ namespace UWPIlmuTajwid
         private void panelWaqaf_Checked(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(TajwidWaqaf));
+        }
+
+        private void panelHome_Checked(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
         }
     }
 }

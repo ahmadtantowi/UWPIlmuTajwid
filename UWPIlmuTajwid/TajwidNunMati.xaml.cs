@@ -91,5 +91,10 @@ namespace UWPIlmuTajwid
         {
             Frame.Navigate(typeof(TajwidWaqaf));
         }
+
+        private void panelHome_Checked(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
     }
 }

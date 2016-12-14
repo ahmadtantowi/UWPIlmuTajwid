@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <SplitView x:Name="NavigationPane" DisplayMode="CompactInline">
+    <SplitView x:Name="NavigationPane" DisplayMode="CompactOverlay">
         <SplitView.Pane>
             <Grid>
                 <Grid.RowDefinitions>
@@ -21,6 +21,12 @@
                         Click="HamburgerButton_Click"/>
 
                 <StackPanel Name="NavigationMenu" Grid.Row="1">
+                    <RadioButton Name="panelHome"
+                                 GroupName="GroupTajwid"
+                                 Style="{StaticResource NavigationButtonStyle}"
+                                 Tag="&#xE10F;"
+                                 Content="Beranda"
+                                 Checked="panelHome_Checked"/>
                     <RadioButton Name="panelAlifLam"
                                  GroupName="GroupTajwid"
                                  Style="{StaticResource NavigationButtonStyle}"
@@ -75,7 +81,7 @@
                 <StackPanel>
                     <TextBlock Text="MIM MATI/TANWIN" 
                                Style="{StaticResource BaseTextBlockStyle}" 
-                               Margin="12,13"/>
+                               Margin="11,12"/>
                     <Pivot>
                         <PivotItem Header="Idzhar Syafawi">
                             <ScrollViewer>
