@@ -85,5 +85,25 @@ namespace UWPIlmuTajwid
         {
             Frame.Navigate(typeof(MainPage));
         }
+
+        private void CthQamariyah1_Click(object sender, RoutedEventArgs e)
+        {
+            CthQamariyah1ME.Play();
+        }
+
+        private void CthQamariyah2_Click(object sender, RoutedEventArgs e)
+        {
+            CthQamariyah2ME.Play();
+        }
+
+        private void CthSyamsiyah1_Click(object sender, RoutedEventArgs e)
+        {
+            CthSyamsiyah1ME.Play();
+        }
+
+        private void CthSyamsiyah2_Click(object sender, RoutedEventArgs e)
+        {
+            CthSyamsiyah2ME.Play();
+        }
     }
 }

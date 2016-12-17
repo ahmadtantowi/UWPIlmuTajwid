@@ -92,6 +92,40 @@
                                     <TextBlock Text="Huruf-hurufnya:" Margin="0,10,0,0"/>
                                     <TextBlock Name="HurufSyamisyah" FontFamily="Arial" 
                                                FontSize="30" TextWrapping="Wrap"/>
+
+                                    <TextBlock Text="Contoh:" Margin="0,10,0,0"/>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthSyamsiyah1" 
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthSyamsiyah1_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="وَاَقِيْمُواألصَّلاَةُ"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthSyamsiyah2" 
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthSyamsiyah2_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="فَلَكُمُالرُّبُعُ"/>
+                                    </StackPanel>
+
+                                    <!-- MEDIA ELEMENT -->
+                                    <MediaElement x:Name="CthSyamsiyah1ME"
+                                                  Source="/Assets/Contoh/CthSyamsiyah1.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
+                                    <MediaElement x:Name="CthSyamsiyah2ME"
+                                                  Source="/Assets/Contoh/CthSyamsiyah2.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
                                 </StackPanel>
                             </ScrollViewer>
                         </PivotItem>
@@ -101,10 +135,45 @@
                                 <StackPanel>
                                     <TextBlock Name="PengertianQamariyah" TextWrapping="Wrap"/>
                                     <TextBlock Text="Cara membacanya:" Margin="0,10,0,0"/>
+                                    
                                     <TextBlock Name="CaraBacaQamariyah" TextWrapping="Wrap"/>
                                     <TextBlock Text="Huruf-hurufnya:" Margin="0,10,0,0"/>
                                     <TextBlock Name="HurufQamariyah" FontFamily="Arial" 
                                                FontSize="30" TextWrapping="Wrap"/>
+                                   
+                                    <TextBlock Text="Contoh:" Margin="0,10,0,0"/>
+                                    
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthQamariyah1" 
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthQamariyah1_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="وَالْأَرْحَا"/>
+                                    </StackPanel>
+                                    
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthQamariyah2" 
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthQamariyah2_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="وَلاَ تَلْبِسُواألْحَقُّ"/>
+                                    </StackPanel>
+
+                                    <!-- MEDIA ELEMENT -->
+                                    <MediaElement x:Name="CthQamariyah1ME"
+                                                  Source="/Assets/Contoh/CthQamariyah1.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
+                                    <MediaElement x:Name="CthQamariyah2ME"
+                                                  Source="/Assets/Contoh/CthQamariyah2.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
                                 </StackPanel>
                             </ScrollViewer>
                         </PivotItem>

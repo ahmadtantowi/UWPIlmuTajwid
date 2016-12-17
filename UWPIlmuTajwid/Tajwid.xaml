@@ -78,10 +78,11 @@
                         </NavigationThemeTransition>
                     </TransitionCollection>
                 </Frame.ContentTransitions>
-                <StackPanel>
+                <StackPanel VerticalAlignment="Center">
                     <TextBlock Text="MENU TAJWID" 
                                Style="{StaticResource BaseTextBlockStyle}" 
-                               Margin="10,12"/>
+                               Margin="10,12"
+                               HorizontalAlignment="Center"/>
                     <TextBlock Text="... وَرَتِّلِ الْقُرْءَانَ تَرْتِيْلاً"
                                FontFamily="Arial"
                                FontSize="30"
@@ -90,10 +91,15 @@
                     <TextBlock Text="''... Dan bacalah Al-Qur'an itu dengan perlahan/tartil (bertajwid)''" 
                                FontStyle="Italic"
                                Margin="12,5,12,0"
+                               TextWrapping="Wrap"
                                HorizontalAlignment="Center"/>
                     <TextBlock Text="- QS Al-Muzzammil(73): 4"
                                Margin="12,5"
                                HorizontalAlignment="Center"/>
+                    <TextBlock Text="Tap/klik tombol di pojok kiri atas untuk melihat daftar menu"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Center"
+                               Margin="10,20"/>
                 </StackPanel>
             </Frame>
         </SplitView.Content>

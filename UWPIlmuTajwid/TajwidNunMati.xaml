@@ -83,6 +83,8 @@
                                Style="{StaticResource BaseTextBlockStyle}" 
                                Margin="11,12"/>
                     <Pivot>
+                        
+                        <!-- IDZHAR -->
                         <PivotItem Header="Idzhar">
                             <ScrollViewer>
                                 <StackPanel>
@@ -90,10 +92,45 @@
                                     <TextBlock Text="Huruf-hurufnya:" Margin="0,10,0,0"/>
                                     <TextBlock Name="HurufIdzhar" FontFamily="Arial" 
                                                FontSize="30" TextWrapping="Wrap"/>
+
+                                    <TextBlock Text="Contoh:" Margin="0,10,0,0"/>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthIdzhar1" 
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthIdzhar1_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="ءَايَةٍ أَوْنُنْسِهَا"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthIdzhar2" 
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthIdzhar2_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="وَمَتَاعٌ إِلَى حِيْنٍ"/>
+                                    </StackPanel>
+
+                                    <!-- MEDIA ELEMENT -->
+                                    <MediaElement x:Name="CthIdzhar1ME"
+                                                  Source="/Assets/Contoh/CthIdzhar1.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
+                                    <MediaElement x:Name="CthIdzhar2ME"
+                                                  Source="/Assets/Contoh/CthIdzhar2.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
                                 </StackPanel>
                             </ScrollViewer>
                         </PivotItem>
 
+                        <!-- IDGHAM BIGUNNAH -->
                         <PivotItem Header="Idgham bigunnah">
                             <ScrollViewer>
                                 <StackPanel>
@@ -101,10 +138,45 @@
                                     <TextBlock Text="Huruf-hurufnya:" Margin="0,10,0,0"/>
                                     <TextBlock Name="HurufIdghamBigunnah" FontFamily="Arial" 
                                                FontSize="30" TextWrapping="Wrap"/>
+
+                                    <TextBlock Text="Contoh:" Margin="0,10,0,0"/>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthIdghamBigunnah1" 
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthIdghamBigunnah1_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="وَمَنْ يَتَبَدَّلِ الْكُفْرَ"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthIdghamBigunnah2" 
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthIdghamBigunnah2_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="وَصِيَّةٍ يُوْصِيْنَ"/>
+                                    </StackPanel>
+
+                                    <!-- MEDIA ELEMENT -->
+                                    <MediaElement x:Name="CthIdghamBigunnah1ME"
+                                                  Source="/Assets/Contoh/CthIdghamBigunnah1.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
+                                    <MediaElement x:Name="CthIdghamBigunnah2ME"
+                                                  Source="/Assets/Contoh/CthIdghamBigunnah2.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
                                 </StackPanel>
                             </ScrollViewer>
                         </PivotItem>
 
+                        <!-- IDGHAM BILAGUNNAH -->
                         <PivotItem Header="Idgham bilagunnah">
                             <ScrollViewer>
                                 <StackPanel>
@@ -112,10 +184,45 @@
                                     <TextBlock Text="Huruf-hurufnya:" Margin="0,10,0,0"/>
                                     <TextBlock Name="HurufIdghamBilagunnah" FontFamily="Arial" 
                                                FontSize="30" TextWrapping="Wrap"/>
+
+                                    <TextBlock Text="Contoh:" Margin="0,10,0,0"/>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthIdghamBilagunnah1" 
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthIdghamBilagunnah1_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="فَإِنْ لَّمْ"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthIdghamBilagunnah2" 
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthIdghamBilagunnah2_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="تَوَّابًارَّحِيْمًا"/>
+                                    </StackPanel>
+
+                                    <!-- MEDIA ELEMENT -->
+                                    <MediaElement x:Name="CthIdghamBilagunnah1ME"
+                                                  Source="/Assets/Contoh/CthIdghamBilagunnah1.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
+                                    <MediaElement x:Name="CthIdghamBilagunnah2ME"
+                                                  Source="/Assets/Contoh/CthIdghamBilagunnah2.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
                                 </StackPanel>
                             </ScrollViewer>
                         </PivotItem>
 
+                        <!-- IQLAB -->
                         <PivotItem Header="Iqlab">
                             <ScrollViewer>
                                 <StackPanel>
@@ -123,10 +230,30 @@
                                     <TextBlock Text="Huruf-hurufnya:" Margin="0,10,0,0"/>
                                     <TextBlock Name="HurufIqlab" FontFamily="Arial" 
                                                FontSize="30" TextWrapping="Wrap"/>
+
+                                    <TextBlock Text="Contoh:" Margin="0,10,0,0"/>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthIqlab1" 
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthIqlab1_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="مِنْ بَعْدِ"/>
+                                    </StackPanel>
+
+                                    <!-- MEDIA ELEMENT -->
+                                    <MediaElement x:Name="CthIqlab1ME"
+                                                  Source="/Assets/Contoh/CthIqlab1.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
                                 </StackPanel>
                             </ScrollViewer>
                         </PivotItem>
 
+                        <!-- IKHFA -->
                         <PivotItem Header="Ikhfa">
                             <ScrollViewer>
                                 <StackPanel>
@@ -134,6 +261,40 @@
                                     <TextBlock Text="Huruf-hurufnya:" Margin="0,10,0,0"/>
                                     <TextBlock Name="HurufIkhfa" FontFamily="Arial" 
                                                FontSize="30" TextWrapping="Wrap"/>
+
+                                    <TextBlock Text="Contoh:" Margin="0,10,0,0"/>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthIkhfa1" 
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthIkhfa1_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="فَإِنْ كَانَ لَهُ"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthIkhfa2" 
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthIkhfa2_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="مَانَنْسَخْ مِنْ"/>
+                                    </StackPanel>
+
+                                    <!-- MEDIA ELEMENT -->
+                                    <MediaElement x:Name="CthIkhfa1ME"
+                                                  Source="/Assets/Contoh/CthIkhfa1.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
+                                    <MediaElement x:Name="CthIkhfa2ME"
+                                                  Source="/Assets/Contoh/CthIkhfa2.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
                                 </StackPanel>
                             </ScrollViewer>
                         </PivotItem>

@@ -96,18 +96,35 @@
                         <PivotItem Header="Tanda waqaf">
                             <ScrollViewer>
                                 <StackPanel>
-                                    <TextBlock Text="1. Waqaf lazim" FontSize="18"/>
-                                    <TextBlock Text="2. Waqaf mutlak" FontSize="18"/>
-                                    <TextBlock Text="3. Waqaf jaiz" FontSize="18"/>
-                                    <TextBlock Text="4. Waqaf waslu ula" FontSize="18"/>
-                                    <TextBlock Text="5. Waqaf la washal" FontSize="18"/>
-                                    <TextBlock Text="5. Waqaf waqfu ula" FontSize="18"/>
-                                    <TextBlock Text="7. Waqaf mu'anaqah" FontSize="18"/>
-                                    <TextBlock Text="8. Waqaf mustahab" FontSize="18"/>
-                                    <TextBlock Text="9. Waqaf mujawwaz" FontSize="18"/>
-                                    <TextBlock Text="10. Waqaf murakhas" FontSize="18"/>
-                                    <TextBlock Text="11. Waqaf qabih" FontSize="18"/>
-                                    <TextBlock Text="12. Waqaf saktah" FontSize="18"/>
+                                    <TextBlock Text="1. Waqaf lazim" FontWeight="SemiBold"/>
+                                    <TextBlock Name="PenjelasanLazim" TextWrapping="Wrap" Margin="0,0,0,5"/>
+                                    
+                                    <TextBlock Text="2. Waqaf mutlak" FontWeight="SemiBold"/>
+                                    <TextBlock Name="PenjelasanMutlak" TextWrapping="Wrap" Margin="0,0,0,5"/>
+                                    
+                                    <TextBlock Text="3. Waqaf jaiz" FontWeight="SemiBold"/>
+                                    <TextBlock Name="PenjelasanJaiz" TextWrapping="Wrap" Margin="0,0,0,5"/>
+                                    
+                                    <TextBlock Text="4. Waqaf waslu ula" FontWeight="SemiBold"/>
+                                    <TextBlock Name="PenjelasanWasluUla" TextWrapping="Wrap" Margin="0,0,0,5"/>
+                                    
+                                    <TextBlock Text="5. Waqaf la washal" FontWeight="SemiBold"/>
+                                    <TextBlock Name="PenjelasanLaWashal" TextWrapping="Wrap" Margin="0,0,0,5"/>
+                                    
+                                    <TextBlock Text="6. Waqaf waqfu ula" FontWeight="SemiBold"/>
+                                    <TextBlock Name="PenjelasanWaqfuUla" TextWrapping="Wrap" Margin="0,0,0,5"/>
+                                    
+                                    <TextBlock Text="7. Waqaf mu'anaqah" FontWeight="SemiBold"/>
+                                    <TextBlock Name="PenjelasanMuanaqah" TextWrapping="Wrap" Margin="0,0,0,5"/>
+                                    
+                                    <TextBlock Text="8. Waqaf murakhas" FontWeight="SemiBold"/>
+                                    <TextBlock Name="PenjelasanMurakhas" TextWrapping="Wrap" Margin="0,0,0,5"/>
+                                    
+                                    <TextBlock Text="9. Waqaf qabih" FontWeight="SemiBold"/>
+                                    <TextBlock Name="PenjelasanQabih" TextWrapping="Wrap" Margin="0,0,0,5"/>
+                                    
+                                    <TextBlock Text="10. Waqaf saktah" FontWeight="SemiBold"/>
+                                    <TextBlock Name="PenjelasanSaktah" TextWrapping="Wrap" Margin="0,0,0,5"/>
                                 </StackPanel>
                             </ScrollViewer>
                         </PivotItem>

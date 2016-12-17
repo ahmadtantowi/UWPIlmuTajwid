@@ -83,22 +83,108 @@
                                Style="{StaticResource BaseTextBlockStyle}" 
                                Margin="11,12"/>
                     <Pivot>
+
+                        <PivotItem Header="Penjelasan">
+                            <ScrollViewer>
+                                <StackPanel>
+                                    <TextBlock Name="PenjelasanQalqalah" 
+                                               TextWrapping="Wrap"/>
+                                    <TextBlock Text="Huruf-hurufnya:" 
+                                               Margin="0,10,0,0"/>
+                                    <TextBlock Name="HurufQalqalah" 
+                                               FontFamily="Arial" 
+                                               FontSize="30" 
+                                               TextWrapping="Wrap"/>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </PivotItem>
+                        
+                        <!-- QALQALAH SUGRA -->
                         <PivotItem Header="Sugra">
                             <ScrollViewer>
                                 <StackPanel>
                                     <TextBlock Name="PengertianSugra" TextWrapping="Wrap"/>
                                     <TextBlock Text="Cara membacanya:" Margin="0,10,0,0"/>
                                     <TextBlock Name="CaraBacaSugra" TextWrapping="Wrap"/>
+
+                                    <TextBlock Text="Contoh:" Margin="0,10,0,0"/>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthQalqSugra1" 
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthQalqSugra1_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="إِلَّآإِبْلِيْسَ"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthQalqSugra2" 
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthQalqSugra2_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="أَوْيَجْعَلَ اللّهُ"/>
+                                    </StackPanel>
+
+                                    <!-- MEDIA ELEMENT -->
+                                    <MediaElement x:Name="CthQalqSugra1ME"
+                                                  Source="/Assets/Contoh/CthQalqSugra1.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
+                                    <MediaElement x:Name="CthQalqSugra2ME"
+                                                  Source="/Assets/Contoh/CthQalqSugra2.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
                                 </StackPanel>
                             </ScrollViewer>
                         </PivotItem>
 
+                        <!-- QALQALAH KUBRA -->
                         <PivotItem Header="Kubra">
                             <ScrollViewer>
                                 <StackPanel>
                                     <TextBlock Name="PengertianKubra" TextWrapping="Wrap"/>
                                     <TextBlock Text="Cara membacanya:" Margin="0,10,0,0"/>
                                     <TextBlock Name="CaraBacaKubra" TextWrapping="Wrap"/>
+
+                                    <TextBlock Text="Contoh:" Margin="0,10,0,0"/>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthQalqKubra1" 
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthQalqKubra1_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="قُلْ أَعُذُبِرَبِّ الْفَلَقِ"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthQalqKubra2" 
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthQalqKubra2_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="لَمْ يَلِدْ وَلَمْ يُوْلَدُ"/>
+                                    </StackPanel>
+
+                                    <!-- MEDIA ELEMENT -->
+                                    <MediaElement x:Name="CthQalqKubra1ME"
+                                                  Source="/Assets/Contoh/CthQalqKubra1.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
+                                    <MediaElement x:Name="CthQalqKubra2ME"
+                                                  Source="/Assets/Contoh/CthQalqKubra2.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
                                 </StackPanel>
                             </ScrollViewer>
                         </PivotItem>

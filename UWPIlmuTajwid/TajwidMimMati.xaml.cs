@@ -92,5 +92,20 @@ namespace UWPIlmuTajwid
         {
             Frame.Navigate(typeof(MainPage));
         }
+
+        private void CthIdzharSyafawi1_Click(object sender, RoutedEventArgs e)
+        {
+            CthIkhfaSyafawi1ME.Play();
+        }
+
+        private void CthIdzharSyafawi2_Click(object sender, RoutedEventArgs e)
+        {
+            CthIdzharSyafawi2ME.Play();
+        }
+
+        private void CthIdghamMimi1_Click(object sender, RoutedEventArgs e)
+        {
+            CthIdghamMimi1ME.Play();
+        }
     }
 }
