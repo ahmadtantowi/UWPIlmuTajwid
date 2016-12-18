@@ -16,10 +16,10 @@ namespace UWPIlmuTajwid
     /// </summary>
     public sealed partial class Latihan : Page
     {
-        int rows;
-        string path;
-        SQLite.Net.SQLiteConnection conn;
-        ArrayList list = new ArrayList();
+        public int rows;
+        public string path;
+        public SQLite.Net.SQLiteConnection conn;
+        public ArrayList list = new ArrayList();
 
         int jumlahPertanyaan = 0;   // maksimal 9
         int jawabanBenar;
@@ -76,7 +76,10 @@ namespace UWPIlmuTajwid
                 jawabanBenar += 1;
         }
 
-        private int getIdPertanyaan1(int _rows)
+        /* 
+         * hanya mengambil id
+         */ 
+        public int getIdPertanyaan1(int _rows)
         {
             Random rnd = new Random();
             int id = rnd.Next(1, _rows);     // ambil nilai secara acak dari 1 sampai 39
@@ -90,7 +93,10 @@ namespace UWPIlmuTajwid
             return id;
         }
 
-        private int getIdPertanyaan2(int _rows)
+        /*
+         * mengambil id + cek id yang sama
+         */
+        public int getIdPertanyaan2(int _rows)
         {
             var rnd = new Random();
             int id = rnd.Next(1, _rows);                                 // ambil nilai secara acak dari 1 sampai 39
@@ -116,9 +122,12 @@ namespace UWPIlmuTajwid
             return id;
         }
 
-        private int getIdPertanyaan3(int _rows)
+        /* 
+         * mengambil id + cek id yang sama + cek jumlah pertanyaan dari tabel
+         */
+        public int getIdPertanyaan3(int _rows)
         {
-            if (_rows > 9)
+            if (_rows > 9)      // jika jumlah pertanyaan dari tabel lebih dari 9
             {
                 var rnd = new Random();
                 int id = rnd.Next(1, _rows);                                // ambil nilai secara acak dari 1 sampai 39
