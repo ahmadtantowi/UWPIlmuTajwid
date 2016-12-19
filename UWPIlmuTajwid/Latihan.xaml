@@ -20,6 +20,9 @@
                         <Setter Target="_b.MinWidth" Value="300"/>
                         <Setter Target="_c.MinWidth" Value="300"/>
                         <Setter Target="_d.MinWidth" Value="300"/>
+                        <Setter Target="statusJawabanBenar.Width" Value="100"/>
+                        <Setter Target="statusJawabanSalah.Width" Value="100"/>
+                        <Setter Target="btnNext.Width" Value="200"/>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState>
@@ -55,19 +58,9 @@
                     HorizontalAlignment="Center" 
                     VerticalAlignment="Center">
 
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Name="textPertanyaan" 
-                           Text="Pertanyaan 10/10"
-                           Margin="5,15,55,0"/>
-                <AppBarButton Name="statusJawabanBenar" 
-                              Icon="Accept" Height="35" 
-                              Foreground="Green"
-                              IsEnabled="False"/>
-                <AppBarButton Name="statusJawabanSalah" 
-                              Icon="Cancel" Height="35"
-                              Foreground="Red"
-                              IsEnabled="False"/>
-            </StackPanel>
+            <TextBlock Name="textPertanyaan" 
+                       Text="Pertanyaan 10/10"
+                       Margin="5,15,55,0"/>
 
             <TextBox Name="boxPertanyaan"
                      Text="Pertanyaan &#10; بسيبس"
@@ -104,12 +97,29 @@
                 </StackPanel>
             </StackPanel>
 
-            <Button Name="btnNext" Content="Lanjut >>"
-                    Margin="0,20"
-                    Width="150"
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20">
+                <AppBarButton Name="statusJawabanBenar" 
+                              Icon="Accept" 
+                              Height="50" Width="65"
+                              Foreground="White"
+                              Background="Green"
+                              IsEnabled="False"
+                              IsHitTestVisible="False"/>
+                <AppBarButton Name="statusJawabanSalah" 
+                              Icon="Cancel" 
+                              Height="50" Width="65"
+                              Foreground="White"
+                              Background="Red"
+                              IsEnabled="False"
+                              IsHitTestVisible="False"/>
+                <AppBarSeparator Margin="3,0"/>
+                <Button Name="btnNext" Content="Lanjut >>"
+                    Margin="0"
+                    Height="50" Width="130"
                     HorizontalAlignment="Center"
                     IsEnabled="False"
                     Click="btnNext_Click"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>

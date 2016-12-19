@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -39,10 +28,32 @@ namespace UWPIlmuTajwid
             "4. Waqaf buruk (qabiih)" +Environment.NewLine +
             "yaitu mewaqafkan ditengah kalimat dengan membaca tidak sepurna sehingga mempengaruhi makna yang berkaitan dengan kalimat yang lainnya, waqaf ini harus dihindari";
 
+        string Lazim        = "Dilambangkan dengan huruf mim (م), diharuskan untuk berhenti. Biasanya terletak di akhir kalimat";
+        string Mutlak       = "Dilambangkan dengan huruf tha (ط), diutamakan untuk berhenti pada waqaf tersebut";
+        string Jaiz         = "Dilambangkan dengan huruf jim (ج), boleh berhenti atau diteruskan";
+        string WasluUla     = "Dilambangkan dengan huruf shad-lam-ya (صلى), boleh berhenti atau lebih baik diteruskan";
+        string LaWashal     = "Dilambangkan dengan huruf lam-alif (لا), dilarang berhenti kecuali pada akhir ayat";
+        string WaqfuUla     = "Dilambangkan dengan huruf qaf-alif-lam (قال), lebih baik berhenti";
+        string Muanaqah     = "Dilambangkan dengan tiga-titik berbentuk segitiga sebanyak dua buah, diutamakan berhenti pada salah satu tanda waqaf tersebut";
+        string Murakhas     = "Dilambangkan dengan huruf shad (ص), boleh berhenti karena ayatnya panjang, diutamakan untuk diteruskan";
+        string Qabih        = "Dilambangkan dengan huruf qaf (ق), diutamakan untuk diteruskan";
+        string Saktah       = "Dilambangkan dengan sin-alif-kaf-ta-hha (ساكته), diharuskan untuk berhenti dan diam sejenak tanpa mengambil nafas";
+
         void LoadContent()
         {
             PengertianWaqaf.Text = pengertianWaqaf;
             JenisWaqaf.Text = jenisWaqaf;
+
+            PenjelasanLazim.Text = Lazim;
+            PenjelasanMutlak.Text = Mutlak;
+            PenjelasanJaiz.Text = Jaiz;
+            PenjelasanWasluUla.Text = WasluUla;
+            PenjelasanLaWashal.Text = LaWashal;
+            PenjelasanWaqfuUla.Text = WaqfuUla;
+            PenjelasanMuanaqah.Text = Muanaqah;
+            PenjelasanMurakhas.Text = Murakhas;
+            PenjelasanQabih.Text = Qabih;
+            PenjelasanSaktah.Text = Saktah;
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)

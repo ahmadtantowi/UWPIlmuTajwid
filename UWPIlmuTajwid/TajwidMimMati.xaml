@@ -83,7 +83,9 @@
                                Style="{StaticResource BaseTextBlockStyle}" 
                                Margin="11,12"/>
                     <Pivot>
-                        <PivotItem Header="Idzhar Syafawi">
+                        
+                        <!-- IDZHAR SYAFAWI -->
+                        <PivotItem Header="Idzhar syafawi">
                             <ScrollViewer>
                                 <StackPanel>
                                     <TextBlock Name="PengertianIdzharSyafawi" TextWrapping="Wrap"/>
@@ -92,11 +94,46 @@
                                     <TextBlock Text="Huruf-hurufnya:" Margin="0,10,0,0"/>
                                     <TextBlock Name="HurufIdzharSyafawi" FontFamily="Arial" 
                                                FontSize="30" TextWrapping="Wrap"/>
+
+                                    <TextBlock Text="Contoh:" Margin="0,10,0,0"/>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthIdzharSyafawi1" 
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthIdzharSyafawi1_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="رَسُوْلَكُمْ كَمَا"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthIdzharSyafawi2" 
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthIdzharSyafawi2_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="بَعْضُكُمْ لِبَعْدِ"/>
+                                    </StackPanel>
+
+                                    <!-- MEDIA ELEMENT -->
+                                    <MediaElement x:Name="CthIdzharSyfawi1ME"
+                                                  Source="/Assets/Contoh/CthIdzharSyafawi1.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
+                                    <MediaElement x:Name="CthIdzharSyafawi2ME"
+                                                  Source="/Assets/Contoh/CthIdzharSyafawi2.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
                                 </StackPanel>
                             </ScrollViewer>
                         </PivotItem>
 
-                        <PivotItem Header="Idgham Mimi">
+                        <!-- IDGHAM MIMI -->
+                        <PivotItem Header="Idgham mimi">
                             <ScrollViewer>
                                 <StackPanel>
                                     <TextBlock Name="PengertianIdghamMimi" TextWrapping="Wrap"/>
@@ -105,11 +142,35 @@
                                     <TextBlock Text="Huruf-hurufnya:" Margin="0,10,0,0"/>
                                     <TextBlock Name="HurufIdghamMimi" FontFamily="Arial" 
                                                FontSize="30" TextWrapping="Wrap"/>
+
+                                    <TextBlock Text="Contoh:" Margin="0,10,0,0"/>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthIdghamMimi1" 
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthIdghamMimi1_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="لِأَنْفُسِكُمْ مِّنْ خَيْرٍ"/>
+                                    </StackPanel>
+
+                                    <!-- MEDIA ELEMENT -->
+                                    <MediaElement x:Name="CthIdghamMimi1ME"
+                                                  Source="/Assets/Contoh/CthIdghamMimi1.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
+                                    <MediaElement x:Name="CthIdghamMimi2ME"
+                                                  Source="/Assets/Contoh/CthIdghamMimi2.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
                                 </StackPanel>
                             </ScrollViewer>
                         </PivotItem>
 
-                        <PivotItem Header="Ikhfa Syafawi">
+                        <!-- IKHFA SYAFAWI -->
+                        <PivotItem Header="Ikhfa syafawi">
                             <ScrollViewer>
                                 <StackPanel>
                                     <TextBlock Name="PengertianIkhfaSyafawi" TextWrapping="Wrap"/>
@@ -118,6 +179,25 @@
                                     <TextBlock Text="Huruf-hurufnya:" Margin="0,10,0,0"/>
                                     <TextBlock Name="HurufIkhfaSyafawi" FontFamily="Arial" 
                                                FontSize="30" TextWrapping="Wrap"/>
+
+                                    <!--TextBlock Text="Contoh:" Margin="0,10,0,0"/>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <AppBarButton Name="CthIkhfaSyafawi1"
+                                                      Icon="Play" 
+                                                      Height="50" Width="40"
+                                                      Click="CthIkhfaSyafawi1_Click"/>
+                                        <TextBlock Margin="0,10"
+                                                   FontSize="25"
+                                                   FontFamily="Arial"
+                                                   Text="أَنْبَأَهُمْ بِأَسْمَائِهِمْ"/>
+                                    </StackPanel-->
+
+                                    <!-- MEDIA ELEMENT -->
+                                    <MediaElement x:Name="CthIkhfaSyafawi1ME"
+                                                  Source="/Assets/Contoh/CthIkhfaSyafawi1.wav"
+                                                  Volume="1"
+                                                  AutoPlay="False"/>
                                 </StackPanel>
                             </ScrollViewer>
                         </PivotItem>

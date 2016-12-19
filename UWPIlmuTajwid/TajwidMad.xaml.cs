@@ -69,5 +69,20 @@ namespace UWPIlmuTajwid
         {
             Frame.Navigate(typeof(MainPage));
         }
+
+        private void CthMadTbiA_Click(object sender, RoutedEventArgs e)
+        {
+            CthMadTbiAME.Play();
+        }
+
+        private void CthMadTbiW_Click(object sender, RoutedEventArgs e)
+        {
+            CthMadTbiWME.Play();
+        }
+
+        private void CthMadTbiY_Click(object sender, RoutedEventArgs e)
+        {
+            CthMadTbiYME.Play();
+        }
     }
 }

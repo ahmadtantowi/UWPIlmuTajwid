@@ -96,5 +96,50 @@ namespace UWPIlmuTajwid
         {
             Frame.Navigate(typeof(MainPage));
         }
+
+        private void CthIdzhar1_Click(object sender, RoutedEventArgs e)
+        {
+            CthIdzhar1ME.Play();
+        }
+
+        private void CthIdzhar2_Click(object sender, RoutedEventArgs e)
+        {
+            CthIdzhar2ME.Play();
+        }
+
+        private void CthIdghamBigunnah1_Click(object sender, RoutedEventArgs e)
+        {
+            CthIdghamBigunnah1ME.Play();
+        }
+
+        private void CthIdghamBigunnah2_Click(object sender, RoutedEventArgs e)
+        {
+            CthIdghamBigunnah2ME.Play();
+        }
+
+        private void CthIdghamBilagunnah1_Click(object sender, RoutedEventArgs e)
+        {
+            CthIdghamBilagunnah1ME.Play();
+        }
+
+        private void CthIdghamBilagunnah2_Click(object sender, RoutedEventArgs e)
+        {
+            CthIdghamBilagunnah2ME.Play();
+        }
+
+        private void CthIqlab1_Click(object sender, RoutedEventArgs e)
+        {
+            CthIqlab1ME.Play();
+        }
+
+        private void CthIkhfa1_Click(object sender, RoutedEventArgs e)
+        {
+            CthIkhfa1ME.Play();
+        }
+
+        private void CthIkhfa2_Click(object sender, RoutedEventArgs e)
+        {
+            CthIkhfa2ME.Play();
+        }
     }
 }

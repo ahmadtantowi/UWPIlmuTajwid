@@ -92,6 +92,28 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\Contoh\CthIdghamBigunnah1.wav" />
+    <Content Include="Assets\Contoh\CthIdghamBigunnah2.wav" />
+    <Content Include="Assets\Contoh\CthIdghamBilagunnah1.wav" />
+    <Content Include="Assets\Contoh\CthIdghamBilagunnah2.wav" />
+    <Content Include="Assets\Contoh\CthIdzhar1.wav" />
+    <Content Include="Assets\Contoh\CthIdzhar2.wav" />
+    <Content Include="Assets\Contoh\CthIdzharSyafawi1.wav" />
+    <Content Include="Assets\Contoh\CthIdzharSyafawi2.wav" />
+    <Content Include="Assets\Contoh\CthIkhfa1.wav" />
+    <Content Include="Assets\Contoh\CthIkhfa2.wav" />
+    <Content Include="Assets\Contoh\CthIqlab1.wav" />
+    <Content Include="Assets\Contoh\CthMadTbiA.wav" />
+    <Content Include="Assets\Contoh\CthMadTbiW.wav" />
+    <Content Include="Assets\Contoh\CthMadTbiY.wav" />
+    <Content Include="Assets\Contoh\CthQalqKubra1.wav" />
+    <Content Include="Assets\Contoh\CthQalqKubra2.wav" />
+    <Content Include="Assets\Contoh\CthQalqSugra1.wav" />
+    <Content Include="Assets\Contoh\CthQalqSugra2.wav" />
+    <Content Include="Assets\Contoh\CthQamariyah1.wav" />
+    <Content Include="Assets\Contoh\CthQamariyah2.wav" />
+    <Content Include="Assets\Contoh\CthSyamsiyah1.wav" />
+    <Content Include="Assets\Contoh\CthSyamsiyah2.wav" />
     <Content Include="Assets\Suara\ain.mp3" />
     <Content Include="Assets\Suara\alif.mp3" />
     <Content Include="Assets\Suara\ba.mp3" />
@@ -121,6 +143,7 @@
     <Content Include="Database\db.sqlite">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="ClassDiagram1.cd" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>

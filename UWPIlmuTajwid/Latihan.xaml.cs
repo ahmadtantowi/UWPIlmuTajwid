@@ -16,8 +16,10 @@ namespace UWPIlmuTajwid
     /// </summary>
     public sealed partial class Latihan : Page
     {
-        string path;
-        SQLite.Net.SQLiteConnection conn;
+        public int rows;
+        public string path;
+        public SQLite.Net.SQLiteConnection conn;
+        public ArrayList list = new ArrayList();
 
         int jumlahPertanyaan = 0;   // maksimal 9
         int jawabanBenar;
@@ -27,6 +29,12 @@ namespace UWPIlmuTajwid
         {
             this.InitializeComponent();
             ConnectSQLite();
+
+            var query = conn.Query<tb_Pertanyaan>("select count(idPertanyaan) as Rows from tb_Pertanyaan");
+            foreach(var message in query)
+                rows = message.Rows + 1;
+            Debug.WriteLine("jumlah pertanyaan dari database " + (rows - 1));
+
             kalkulasiPertanyaan();
         }
 
@@ -68,21 +76,84 @@ namespace UWPIlmuTajwid
                 jawabanBenar += 1;
         }
 
-        private int getIdPertanyaan()
+        /* 
+         * hanya mengambil id
+         */ 
+        public int getIdPertanyaan1(int _rows)
         {
-            ArrayList list = new ArrayList();
             Random rnd = new Random();
-            int id = rnd.Next(1, 40);
+            int id = rnd.Next(1, _rows);     // ambil nilai secara acak dari 1 sampai 39
+            list.Add(id);                   // menyimpan nilai acak ke dalam list
 
+            // menampilkan nilai yang sudah pernah didapat dalam list
             foreach (int value in list)
+                Debug.Write(value + " ");
+            Debug.WriteLine("");
+
+            return id;
+        }
+
+        /*
+         * mengambil id + cek id yang sama
+         */
+        public int getIdPertanyaan2(int _rows)
+        {
+            var rnd = new Random();
+            int id = rnd.Next(1, _rows);                                 // ambil nilai secara acak dari 1 sampai 39
+            Debug.WriteLine("panjang list = " + (list.Count + 1));      // lihat panjang data 
+
+            // cek apakah nilai acak yang diambil sudah pernah didapat sebelumnya
+            for(int i=0; i<list.Count; i++)
             {
-                Debug.WriteLine(value + ", ");
-                if (value == id)
-                    getIdPertanyaan();
+                // jika sudah pernah, maka nilai akan diambil lagi seperti sebelumnya
+                if((int)list[i] == id)
+                {
+                    id = rnd.Next(1, 40);
+                    i = 0;
+                }
+            }
+            list.Add(id);
+
+            // menampilkan nilai yang sudah pernah didapat dalam list
+            foreach (int value in list)
+                Debug.Write(value + " ");
+            Debug.WriteLine("");
+
+            return id;
+        }
+
+        /* 
+         * mengambil id + cek id yang sama + cek jumlah pertanyaan dari tabel
+         */
+        public int getIdPertanyaan3(int _rows)
+        {
+            if (_rows > 9)      // jika jumlah pertanyaan dari tabel lebih dari 9
+            {
+                var rnd = new Random();
+                int id = rnd.Next(1, _rows);                                // ambil nilai secara acak dari 1 sampai 39
+                Debug.WriteLine("panjang list = " + (list.Count + 1));      // lihat panjang data 
+
+                // cek apakah nilai acak yang diambil sudah pernah didapat sebelumnya
+                for (int i = 0; i < list.Count; i++)
+                {
+                    // jika sudah pernah, maka nilai akan diambil lagi seperti sebelumnya
+                    if ((int)list[i] == id)
+                    {
+                        id = rnd.Next(1, 40);
+                        i = 0;
+                    }
+                }
+                list.Add(id);
+
+                // menampilkan nilai yang sudah pernah didapat dalam list
+                foreach (int value in list)
+                    Debug.Write(value + " ");
+                Debug.WriteLine("");
+
+                return id;
             }
 
-            list.Add(id);
-            return id;
+            return 0;
         }
 
         private void getPertanyaan()
@@ -95,7 +166,7 @@ namespace UWPIlmuTajwid
             string pilC = "";
             string pilD = "";
 
-            var query = conn.Query<tb_Pertanyaan>("select * from tb_Pertanyaan where IdPertanyaan = " + getIdPertanyaan());
+            var query = conn.Query<tb_Pertanyaan>("select * from tb_Pertanyaan where IdPertanyaan = " + getIdPertanyaan3(this.rows));
 
             foreach (var message in query)
             {
@@ -166,7 +237,6 @@ namespace UWPIlmuTajwid
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
             boxPertanyaan.Text = "";
-            //boxKalimah.Text = "";
             statusJawabanBenar.IsEnabled = false;
             statusJawabanSalah.IsEnabled = false;
 
@@ -178,6 +248,7 @@ namespace UWPIlmuTajwid
     public class tb_Pertanyaan
     {
         [PrimaryKey, AutoIncrement]
+        public int Rows { get; set; }
         public int IdPertanyaan { get; set; }
         public string Pertanyaan { get; set; }
         public string Kalimah { get; set; }
