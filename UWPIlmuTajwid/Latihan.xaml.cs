@@ -5,7 +5,7 @@ using SQLite.Net.Attributes;
 using System.Diagnostics;
 using System.IO;
 using System;
-using System.Collections;
+using System.Collections.Generic;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -19,7 +19,7 @@ namespace UWPIlmuTajwid
         public int rows;
         public string path;
         public SQLite.Net.SQLiteConnection conn;
-        public ArrayList list = new ArrayList();
+        public List<int> list = new List<int>();
 
         int jumlahPertanyaan = 0;   // maksimal 9
         int jawabanBenar;
